@@ -32,7 +32,6 @@ devtools/
 Thumbs.db
 *.zip
 *.swp
-*.publishproj
-.bash/.git/
 .mydotrepo/
+_viminfo
 
