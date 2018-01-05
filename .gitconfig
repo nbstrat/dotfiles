@@ -9,7 +9,6 @@
 	autocrlf = true
 	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
 	longpaths = true
-	excludesfile = C:\\Users\\1287921639.adm\\Documents\\.gitignore
   packedGitLimit = 128m
   packedGitWindowSize = 128m
 [difftool "sourcetree"]
