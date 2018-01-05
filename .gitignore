@@ -1,0 +1,38 @@
+
+# standard windows workstation directories
+AppData/
+[Cc]ontacts*/
+Desktop/
+Documents/
+Downloads/
+Favorites/
+IntelGraphicsProfiles/
+Links/
+Music/
+OneDrive/
+Oracle/
+Pictures/
+Saved Games/
+Searches/
+Videos/
+
+# ntuser folders/files
+NTUSER.DATE*
+ntuser*
+
+# gov bs ?
+vESD/
+
+# my custom directories
+VC/
+VET/
+devtools/
+
+# normal operational files
+Thumbs.db
+*.zip
+*.swp
+*.publishproj
+.bash/.git/
+.mydotrepo/
+

@@ -1,0 +1,60 @@
+[gui]
+	recentrepo = C:/_projects/smapi
+	recentrepo = C:/_projects/smdb
+	recentrepo = C:/3MHIS/datagrid
+[user]
+	name = Shane Walters
+	email = michael.walters.18.ctr@us.af.mil
+[core]
+	autocrlf = true
+	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+	longpaths = true
+	excludesfile = C:\\Users\\1287921639.adm\\Documents\\.gitignore
+  packedGitLimit = 128m
+  packedGitWindowSize = 128m
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files (x86)/KDiff3/kdiff3.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files (x86)/KDiff3/kdiff3.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = kdiff3
+[diff]
+	guitool = kdiff3
+[credential]
+	helper = !\"C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe\"
+[push]
+	default = matching
+[alias]
+	hist = log --oneline --abbrev-commit --all --graph --decorate --color
+	changelog = !$GIT_DIR/changelog.sh
+[pvcs]
+	location = c:/pvcs
+[color "status"]
+	changed = red normal bold
+	untracked = red normal bold
+	added = green normal bold
+[color "diff"]
+	old = red normal bold
+	new = green normal bold
+[color "branch"]
+	remote = red normal bold
+	current = green normal bold
+	plain = red normal dim
+	local = white normal bold
+[mergetool "kdiff3"]
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+[difftool "kdiff3"]
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+[http]
+	proxy = http://keesler.proxy.us.af.mil:8080
+[https]
+	proxy = http://keesler.proxy.us.af.mil:8080
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+[pack]
+  deltaCacheSize = 128m
+  packSizeLimit = 128m
+	windowMemory = 512m
