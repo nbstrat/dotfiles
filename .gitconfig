@@ -5,7 +5,7 @@
 	recentrepo = C:/_projects/custom_reports
 [user]
 	name = Shane Walters
-	email = michael.walters.18.ctr@us.af.mil
+	email = nbstrat@gmail.com
 [core]
 	autocrlf = true
 	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
@@ -46,10 +46,6 @@
 	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
 [difftool "kdiff3"]
 	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
-[http]
-	proxy = http://keesler.proxy.us.af.mil:8080
-[https]
-	proxy = http://keesler.proxy.us.af.mil:8080
 [filter "lfs"]
 	smudge = git-lfs smudge %f
 	required = true
