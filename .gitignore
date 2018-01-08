@@ -33,6 +33,13 @@ Thumbs.db
 *.zip
 *.swp
 .mydotrepo/
+
+.bash_history
 _viminfo
 .viminfo
+
+# vim network history
+vimfiles/.netrwhist
+
+.bash_history
 
