@@ -15,7 +15,7 @@ alias dlog='git log --decorate --name-only --diff-filter=D --format="%C(auto)%h%
 #alias go='git checkout'
 alias vim='gvim'
 #https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
-alias mydots='git --git-dir=$HOME/.mydotrepo/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.mydotrepo/ --work-tree=$HOME'
 alias cognos='cd /c/_projects/cognos'
 alias dashboard='cd /c/_projects/dashboard'
 alias smapp='cd /c/3MHIS/datagrid'
