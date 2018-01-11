@@ -40,10 +40,10 @@
 # Define the path to the local repository directory.
 LOCAL_PATH=//52MAHG-MP-806/Source\$/
 
+
 # Define the path to the remote backup repository directory
 REMOTE_PATH=//52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Source/
 
-# TODO: Script cannot acccess the remote repos unless I also have a UNC share (windows explorer) to the remote location established using my adm account. 
 
 # Create an array of the git repositories that will be backed up to the remote location.
 repo_list=( 'AIMS.git'
@@ -64,7 +64,7 @@ repo_list=( 'AIMS.git'
              'sm.git'
              'smdb.git'
              'smapi.git'
-             'ttms-documentation.git'
+#             'ttms-documentation.git'
            )
 
 
