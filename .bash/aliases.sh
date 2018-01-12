@@ -38,8 +38,8 @@ alias ttmsdocs='cd /j/TTMS_Documentation'
 
 
 # open specific files in vim
-alias gridcheats='vim /c/Users/1287921639E/Documents/CheatSheets_Reference/datagrid-cheats.txt'
-alias gitcheats='vim /c/Users/1287921639E/Documents/CheatSheets_Reference/Git/git-cheats.txt'
+alias gridcheats='vim $HOME/Documents/CheatSheets_Reference/datagrid-cheats.txt'
+alias gitcheats='vim $HOME/Documents/CheatSheets_Reference/Git/git-cheats.txt'
 
 
 # other stuff
