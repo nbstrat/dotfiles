@@ -47,7 +47,7 @@ NOTE: Using the `SslRequireCert` attribute did not provide the CAC prompt
 on the USAF environment. 
 
 
-If propertly configured, you will be prompted for CAC when making request to port 44300.
+If properly configured, you will be prompted for CAC when making request to port 44300.
  
 * With CAC prompt  
 * `https://localhost:44300/`  
