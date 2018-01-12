@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "post-commit started"
+git push origin master
+echo "post-commit finished"
+
