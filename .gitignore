@@ -1,6 +1,6 @@
 
 # standard windows workstation directories
-AppData/
+/AppData/
 [Cc]ontacts*/
 Desktop/
 Documents/
@@ -28,13 +28,13 @@ VC/
 VET/
 devtools/
 
+# my worklog output file
+worklog.txt
+
 # normal operational files
 Thumbs.db
 *.zip
 *.swp
-.mydotrepo/
-
-.bash_history
 _viminfo
 .viminfo
 
