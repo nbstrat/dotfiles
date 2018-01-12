@@ -28,6 +28,9 @@ VC/
 VET/
 devtools/
 
+# my worklog output file
+worklog.txt
+
 # normal operational files
 Thumbs.db
 *.zip
