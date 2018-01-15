@@ -5,7 +5,7 @@
 	recentrepo = C:/_projects/custom_reports
 [user]
 	name = Shane Walters
-	email = michael.walters.18.ctr@us.af.mil
+	email = nbstrat@gmail.com
 [core]
 	autocrlf = true
 	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
@@ -58,3 +58,8 @@
   deltaCacheSize = 128m
   packSizeLimit = 128m
 	windowMemory = 512m
+
+[includeIf "gitdir:C:/_projects/"]
+    path = .gitconfig-work
+[includeIf "gitdir:C:/3MHIS/"]
+    path = .gitconfig-work
