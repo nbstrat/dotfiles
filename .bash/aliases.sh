@@ -17,6 +17,10 @@ alias dlog='git log --decorate --name-only --diff-filter=D --format="%C(auto)%h%
 #alias go='git checkout'
 alias vim='gvim'
 
+#ttmsdocs shortcuts
+alias docscommit='git commit -m "TTMS documentation changes"' 
+
+
 
 # cd location aliases
 alias bmt='cd /c/_projects/bmt'
