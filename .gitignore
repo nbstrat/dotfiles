@@ -16,6 +16,9 @@ Saved Games/
 Searches/
 Videos/
 
+# appleCrap
+/iCloudDrive
+
 # ntuser folders/files
 NTUSER.DATE*
 ntuser*
@@ -42,4 +45,8 @@ _viminfo
 vimfiles/.netrwhist
 
 .bash_history
+
+# visual studio
+/.dotnet
+/.nuget
 
