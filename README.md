@@ -1,6 +1,6 @@
 # nbstrat dotfiles
 
-[https://nbstrat.github.io/dotfiles/]https://nbstrat.github.io/dotfiles/)
+[https://nbstrat.github.io/dotfiles/](https://nbstrat.github.io/dotfiles/)
 
 
 Quick and dirty dotfiles for configuring a Windows based workstation for the development efforts that I typically am involved in.
