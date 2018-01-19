@@ -54,3 +54,8 @@
   deltaCacheSize = 128m
   packSizeLimit = 128m
 	windowMemory = 512m
+
+[includeIf "gitdir:C:/_projects/"]
+    path = .gitconfig-work
+[includeIf "gitdir:C:/3MHIS/"]
+    path = .gitconfig-work
