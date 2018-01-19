@@ -1,5 +1,8 @@
 # nbstrat dotfiles
 
+[https://nbstrat.github.io/dotfiles/]https://nbstrat.github.io/dotfiles/)
+
+
 Quick and dirty dotfiles for configuring a Windows based workstation for the development efforts that I typically am involved in.
 
 Please note that some of these configurations are 'work-arounds' based on DoD security implementations and are usually not the best approach if you are not required to do so.
