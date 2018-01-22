@@ -50,3 +50,6 @@ vimfiles/.netrwhist
 /.dotnet
 /.nuget
 
+SQL Developer Export Files
+*-export.htm
+*-export.csv
