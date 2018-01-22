@@ -35,9 +35,6 @@ devtools/
 worklog.txt
 
 # normal operational files
-Thumbs.db
-*.zip
-*.swp
 _viminfo
 .viminfo
 

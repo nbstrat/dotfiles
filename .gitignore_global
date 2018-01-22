@@ -1,0 +1,12 @@
+
+# globally applied ignores
+
+# MacOS Specific
+.DS_Store
+
+# Windows Specific
+Thumbs.db
+
+# Non-OS Specific
+*.zip
+*.swp
