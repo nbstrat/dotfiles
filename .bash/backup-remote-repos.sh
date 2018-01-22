@@ -30,10 +30,11 @@
 #    cd /c/Users/1287921639E/.bash/
 #    
 #    To backup all repos defined in this script:
-#    backup-remote-repos.sh
+#    ./backup-remote-repos.sh
 #
 #    To backup a single repo:
-#    backup-remote-repos.sh smapi.git
+#    ./backup-remote-repos.sh smapi.git
+#
 #
 #----------------------------------------------------------------------------------------
 
