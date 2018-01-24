@@ -48,5 +48,5 @@ vimfiles/.netrwhist
 /.nuget
 
 SQL Developer Export Files
-*-export.htm
-*-export.csv
+*export.htm
+*export.sql
