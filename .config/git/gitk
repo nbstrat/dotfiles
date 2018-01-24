@@ -18,12 +18,12 @@ set datetimeformat {%Y-%m-%d %H:%M:%S}
 set limitdiffs 1
 set uicolor SystemButtonFace
 set want_ttk 1
-set bgcolor SystemWindow
-set fgcolor SystemWindowText
+set bgcolor #000000
+set fgcolor #ffffff
 set uifgcolor SystemButtonText
 set uifgdisabledcolor SystemDisabledText
 set colors {green red blue magenta darkgrey brown orange}
-set diffcolors {red "#00a000" blue}
+set diffcolors {red #00a000 #00ff80}
 set mergecolors {red blue green purple brown "#009090" magenta "#808000" "#009000" "#ff0080" cyan "#b07070" "#70b0f0" "#70f0b0" "#f0b070" "#ff70b0"}
 set markbgcolor #e0e0ff
 set diffcontext 3
@@ -51,12 +51,12 @@ set indexcirclecolor green
 set circlecolors {white blue gray blue blue}
 set linkfgcolor blue
 set circleoutlinecolor SystemWindowText
-set geometry(main) 1362x721+0+0
-set geometry(state) normal
-set geometry(topwidth) 1362
+set geometry(main) 1680x943+0+27
+set geometry(state) zoomed
+set geometry(topwidth) 1680
 set geometry(topheight) 266
-set geometry(pwsash0) "722 1"
-set geometry(pwsash1) "861 1"
-set geometry(botwidth) 1115
-set geometry(botheight) 450
+set geometry(pwsash0) "892 1"
+set geometry(pwsash1) "1064 1"
+set geometry(botwidth) 1375
+set geometry(botheight) 672
 set permviews {}
