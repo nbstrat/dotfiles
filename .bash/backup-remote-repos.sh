@@ -65,6 +65,7 @@ repo_list=( 'AIMS.git'
              'sm.git'
              'smdb.git'
              'smapi.git'
+             'sso.git'
 #             'ttms-documentation.git'
            )
 
