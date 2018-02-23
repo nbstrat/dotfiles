@@ -20,7 +20,8 @@ alias vim='gvim'
 #ttmsdocs shortcuts
 alias docscommit='git commit -m "TTMS documentation changes"' 
 
-
+# repo backup 
+alias runbackups='cd $HOME/.bash/ && ./backup-remote-repos.sh'
 
 # cd location aliases
 alias bmt='cd /c/_projects/bmt'
