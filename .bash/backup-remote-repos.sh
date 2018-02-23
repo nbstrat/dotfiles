@@ -120,8 +120,10 @@ function backupFailureMessage() {
   printf "\n"
   echo "Git Backup Failed."
   echo " Possible reasons are that the alias 'backup' has not been defined on the local repository."
-  echo " To define a backup alias, use the following example:"
+  echo " To verify that a backup alias has been defined:"
   echo "    cd ${LOCAL_PATH}${1}"
+  echo "    git remote -v"
+  echo " To define a backup alias, use the following example:"
   echo "    git remote add --mirror=push backup ${REMOTE_PATH}${1}"
 
 }
