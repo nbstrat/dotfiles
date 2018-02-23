@@ -17,8 +17,10 @@ alias dlog='git log --decorate --name-only --diff-filter=D --format="%C(auto)%h%
 #alias go='git checkout'
 alias vim='gvim'
 
-#ttmsdocs shortcuts
+# ttmsdocs and pvcs auto-commits
 alias docscommit='cd $HOME/.bash/ && ./ttms-documents-commit.sh'
+alias pvcscommit='cd $HOME/.bash/ && ./ttms-pvcs-commit.sh'
+
 
 # repo backup 
 alias runbackups='cd $HOME/.bash/ && ./backup-remote-repos.sh'
