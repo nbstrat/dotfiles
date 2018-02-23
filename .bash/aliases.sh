@@ -18,7 +18,7 @@ alias dlog='git log --decorate --name-only --diff-filter=D --format="%C(auto)%h%
 alias vim='gvim'
 
 #ttmsdocs shortcuts
-alias docscommit='git commit -m "TTMS documentation changes"' 
+alias docscommit='cd $HOME/.bash/ && ./ttms-documents-commit.sh'
 
 # repo backup 
 alias runbackups='cd $HOME/.bash/ && ./backup-remote-repos.sh'
