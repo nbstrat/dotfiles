@@ -22,8 +22,6 @@
 	tool = kdiff3
 [diff]
 	guitool = kdiff3
-[credential]
-	helper = !\"C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe\"
 [push]
 	default = matching
 [alias]
