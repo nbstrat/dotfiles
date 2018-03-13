@@ -58,3 +58,5 @@
     path = .gitconfig-work
 [includeIf "gitdir:C:/3MHIS/"]
     path = .gitconfig-work
+[credential]
+	helper = wincred
