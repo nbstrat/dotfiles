@@ -26,6 +26,7 @@ alias pvcscommit='cd $HOME/.bash/ && ./ttms-pvcs-commit.sh'
 alias runbackups='cd $HOME/.bash/ && ./backup-remote-repos.sh'
 
 # cd location aliases
+alias atrrs='cd /c/_projects/atrrs'
 alias bmt='cd /c/_projects/bmt'
 alias cognos='cd /c/_projects/cognos'
 alias reports='cd /c/_projects/custom_reports'
