@@ -18,8 +18,8 @@ alias dlog='git log --decorate --name-only --diff-filter=D --format="%C(auto)%h%
 alias vim='gvim'
 
 # ttmsdocs and pvcs auto-commits
-alias docscommit='cd $HOME/.bash/ && ./ttms-documents-commit.sh'
-alias pvcscommit='cd $HOME/.bash/ && ./ttms-pvcs-commit.sh'
+alias commitdocs='cd $HOME/.bash/ && ./ttms-documents-commit.sh'
+alias commitpvcs='cd $HOME/.bash/ && ./ttms-pvcs-commit.sh'
 
 
 # repo backup 
