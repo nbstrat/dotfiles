@@ -47,16 +47,38 @@ DIR_PATH=/c/Users/1287921639E/Documents/blob-hack/
 
 cd $DIR_PATH
 
+# simple example to get started from
 #find -type f -name '*.txt' -exec grep -l "Mirrored from www.delphibasics.co.uk" {} \;
 
+
+# rename all the delphibasics files
 find -type f -name '*.txt' -exec grep -l "Mirrored from www.delphibasics.co.uk" {} \; -exec bash -c 'mv "$0" "$0.delphibasics.htm"' {} \;
 
 
+# rename all the datamodeler xml files
+# find -type f -name '*.txt' -exec grep -l "object.property.auto.CommentInRDBMSChanged" {} \; -exec bash -c 'mv "$0" "$0.datamodeler.xml"' {} \;
 
-#for file in $(find . -name "*.txt" -exec grep -l "Mirrored from www.delphibasics.co.uk" {} \;)
-#do 
-  #echo mv $file `echo $file | sed s/_test.rb$/_spec.rb/`
-#  echo "fred" 
-#done
+# rename all the older datamodeler xml files
+# find -type f -name '*.txt' -exec grep -l "object.property.auto.GeneratedInRDBMS" {} \; -exec bash -c 'mv "$0" "$0.datamodeler2.xml"' {} \;
 
-#egrep -ir --include=*.{txt} "(mirrored from www.delphibasics.co.uk)" .
+
+
+# rename all the database document files
+#find -type f -name '*.txt' -exec grep -l "../dbdoc.css" {} \; -exec bash -c 'mv "$0" "$0.db.doc.html"' {} \;
+
+
+# rename pdf files
+#find -type f -name '*.txt' -exec grep -l "%PDF" {} \; -exec bash -c 'mv "$0" "$0.pdf"' {} \;
+
+
+# rename gif files
+#find -type f -name '*.txt' -exec grep -l "GIF89" {} \; -exec bash -c 'mv "$0" "$0.gif"' {} \;
+
+
+# rename unittest/devtest documents
+#find -type f -name '*.txt' -exec grep -l "_rels/workbook.xml.rels" {} \; -exec bash -c 'mv "$0" "$0.xlsx"' {} \;
+
+
+# rename spreadsheets
+#find -type f -name '*.txt' -exec grep -l "Test Conducted By:          	Shane Walters" {} \; -exec bash -c 'mv "$0" "$0testdoc.doc"' {} \;
+
