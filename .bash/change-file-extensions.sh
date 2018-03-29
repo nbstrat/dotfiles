@@ -47,9 +47,16 @@ DIR_PATH=/c/Users/1287921639E/Documents/blob-hack/
 
 cd $DIR_PATH
 
-find -type f -name '*.txt' -exec grep -l "Mirrored from www.delphibasics.co.uk" {} \;
+#find -type f -name '*.txt' -exec grep -l "Mirrored from www.delphibasics.co.uk" {} \;
 
-#for file in $(find . -name "*.txt" -exec grep -l "Mirrored from www.delphibasics.co.uk" {})
+find -type f -name '*.txt' -exec grep -l "Mirrored from www.delphibasics.co.uk" {} \; -exec bash -c 'mv "$0" "$0.delphibasics.htm"' {} \;
+
+
+
+#for file in $(find . -name "*.txt" -exec grep -l "Mirrored from www.delphibasics.co.uk" {} \;)
 #do 
-#  echo mv $file `echo $file | sed s/_test.rb$/_spec.rb/`
+  #echo mv $file `echo $file | sed s/_test.rb$/_spec.rb/`
+#  echo "fred" 
 #done
+
+#egrep -ir --include=*.{txt} "(mirrored from www.delphibasics.co.uk)" .
