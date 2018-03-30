@@ -72,13 +72,35 @@ find -type f -name '*.txt' -exec grep -l "%PDF" {} \; -exec bash -c 'mv "$0" "$0
 
 
 # rename gif files
-find -type f -name '*.txt' -exec grep -l "GIF89" {} \; -exec bash -c 'mv "$0" "$0.gif"' {} \;
-
-
-# rename unittest/devtest documents
-find -type f -name '*.txt' -exec grep -l "_rels/workbook.xml.rels" {} \; -exec bash -c 'mv "$0" "$0.xlsx"' {} \;
+# find -type f -name '*.txt' -exec grep -l "GIF89" {} \; -exec bash -c 'mv "$0" "$0.gif"' {} \;
 
 
 # rename spreadsheets
-find -type f -name '*.txt' -exec grep -l "Test Conducted By:          	Shane Walters" {} \; -exec bash -c 'mv "$0" "$0testdoc.doc"' {} \;
+# find -type f -name '*.txt' -exec grep -l "_rels/workbook.xml.rels" {} \; -exec bash -c 'mv "$0" "$0.xlsx"' {} \;
+
+
+#  rename unittest/devtest documents 
+# find -type f -name '*.txt' -exec grep -l "Test Conducted By:          	Shane Walters" {} \; -exec bash -c 'mv "$0" "$0.testdoc.doc"' {} \;
+
+
+# and more datamodeler xml files
+find -type f -name '*.txt' -exec grep -l "object.existsinrepository" {} \; -exec bash -c 'mv "$0" "datamodeler/$0.datamodeler2.xml"' {} \;
+
+# SQLServerPreparedStatement
+find -type f -name '*.txt' -exec grep -l "SQLServerPreparedStatement" {} \; -exec bash -c 'mv "$0" "ms-code-sample/$0.code.html"' {} \;
+
+# ALIS project
+find -type f -name '*.txt' -exec grep -l "F-35 Program Information" {} \; -exec bash -c 'mv "$0" "alis/$0.alis.txt"' {} \;
+find -type f -name '*.txt' -exec grep -l "urn:ALIS_Common_Soap_Header_201002" {} \; -exec bash -c 'mv "$0" "alis/$0.alis-soap.xml"' {} \;
+
+
+# <ItemType>seInformation</ItemType>
+find -type f -name '*.txt' -exec grep -l "<ItemType>seInformation</ItemType>" {} \; -exec bash -c 'mv "$0" "rbServer/$0.rbServer.log"' {} \;
+
+
+# GAS Comments Report
+find -type f -name '*.txt' -exec grep -l "GAS Comments Report" {} \; -exec bash -c 'mv "$0" "gasReport/$0.gas-report.txt"' {} \;
+
+# http://schemas.microsoft.com/win/2004/08/events/trace
+find -type f -name '*.txt' -exec grep -l "http://schemas.microsoft.com/win/2004/08/events/trace" {} \; -exec bash -c 'mv "$0" "eventLogs/$0.event.log"' {} \;
 
