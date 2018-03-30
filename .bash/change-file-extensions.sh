@@ -14,7 +14,7 @@
 # Step 1:
 # create a working directory and cd to it
 # execute the following to extract all dangling commits as text file outputs into the working directory
-for blob in $(git fsck --lost-found | awk '$2 == "blob" { print $3 }'); do git cat-file -p $blob > $blob.txt; done
+# for blob in $(git fsck --lost-found | awk '$2 == "blob" { print $3 }'); do git cat-file -p $blob > $blob.txt; done
 
 
 # Use:
@@ -68,7 +68,7 @@ cd $DIR_PATH
 
 
 # rename pdf files
-find -type f -name '*.txt' -exec grep -l "%PDF" {} \; -exec bash -c 'mv "$0" "$0.pdf"' {} \;
+#find -type f -name '*.txt' -exec grep -l "%PDF" {} \; -exec bash -c 'mv "$0" "$0.pdf"' {} \;
 
 
 # rename gif files
@@ -84,10 +84,10 @@ find -type f -name '*.txt' -exec grep -l "%PDF" {} \; -exec bash -c 'mv "$0" "$0
 
 
 # and more datamodeler xml files
-find -type f -name '*.txt' -exec grep -l "object.existsinrepository" {} \; -exec bash -c 'mv "$0" "datamodeler/$0.datamodeler2.xml"' {} \;
+#find -type f -name '*.txt' -exec grep -l "object.existsinrepository" {} \; -exec bash -c 'mv "$0" "$0.datamodeler2.xml"' {} \;
 
 # SQLServerPreparedStatement
-find -type f -name '*.txt' -exec grep -l "SQLServerPreparedStatement" {} \; -exec bash -c 'mv "$0" "ms-code-sample/$0.code.html"' {} \;
+#find -type f -name '*.txt' -exec grep -l "SQLServerPreparedStatement" {} \; -exec bash -c 'mv "$0" "ms-code-sample/$0.code.html"' {} \;
 
 # ALIS project
 find -type f -name '*.txt' -exec grep -l "F-35 Program Information" {} \; -exec bash -c 'mv "$0" "alis/$0.alis.txt"' {} \;
@@ -105,4 +105,7 @@ find -type f -name '*.txt' -exec grep -l "GAS Comments Report" {} \; -exec bash 
 
 # http://schemas.microsoft.com/win/2004/08/events/trace
 find -type f -name '*.txt' -exec grep -l "http://schemas.microsoft.com/win/2004/08/events/trace" {} \; -exec bash -c 'mv "$0" "eventLogs/$0.event.log"' {} \;
+
+# Page Language="VB"
+find -type f -name '*.txt' -exec grep -l "Page Language="VB"" {} \; -exec bash -c 'mv "$0" "aspx-code/$0.aspx"' {} \;
 
