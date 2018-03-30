@@ -92,6 +92,8 @@ find -type f -name '*.txt' -exec grep -l "SQLServerPreparedStatement" {} \; -exe
 # ALIS project
 find -type f -name '*.txt' -exec grep -l "F-35 Program Information" {} \; -exec bash -c 'mv "$0" "alis/$0.alis.txt"' {} \;
 find -type f -name '*.txt' -exec grep -l "urn:ALIS_Common_Soap_Header_201002" {} \; -exec bash -c 'mv "$0" "alis/$0.alis-soap.xml"' {} \;
+find -type f -name '*.txt' -exec grep -l "MtomService.Resources" {} \; -exec bash -c 'mv "$0" "alis/$0.mtom.txt"' {} \;
+
 
 
 # <ItemType>seInformation</ItemType>
