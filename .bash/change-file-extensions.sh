@@ -108,4 +108,10 @@ find -type f -name '*.txt' -exec grep -l "http://schemas.microsoft.com/win/2004/
 
 # Page Language="VB"
 find -type f -name '*.txt' -exec grep -l "Page Language="VB"" {} \; -exec bash -c 'mv "$0" "aspx-code/$0.aspx"' {} \;
+# Inherits System.Web.UI.Page
+find -type f -name '*.txt' -exec grep -l "Inherits System.Web.UI.Page" {} \; -exec bash -c 'mv "$0" "aspx-code/$0.aspx.vb"' {} \;
+
+
+# TADOQuery
+find -type f -name '*.txt' -exec grep -l "TADOQuery" {} \; -exec bash -c 'mv "$0" "delphi-code/$0"' {} \;
 
