@@ -31,19 +31,6 @@
 DIR_PATH=/c/Users/1287921639E/Documents/blob-hack/
 
 
-#for f in $FILES
-#do
-#  echo "Processing $f file..."
-  # take action on each file. $f store current file name
-  
-  # display the contents of the file
-  #cat $f
-
-  
-
-  # mv "$f" "${f%.txt}.txt"
-   
-#done
 
 cd $DIR_PATH
 
@@ -107,11 +94,24 @@ cd $DIR_PATH
 #find -type f -name '*.txt' -exec grep -l "http://schemas.microsoft.com/win/2004/08/events/trace" {} \; -exec bash -c 'mv "$0" "eventLogs/$0.event.log"' {} \;
 
 # Page Language="VB"
-#find -type f -name '*.txt' -exec grep -l "Page Language="VB"" {} \; -exec bash -c 'mv "$0" "aspx-code/$0.aspx"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Page Language=\"VB\"" {} \; -exec bash -c 'mv "$0" "aspx-code/$0.aspx"' {} \;
 # Inherits System.Web.UI.Page
-find -type f -name '*.txt' -exec grep -l "Inherits System.Web.UI.Page" {} \; -exec bash -c 'mv "$0" "aspx-code/$0.aspx.vb"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Inherits System.Web.UI.Page" {} \; -exec bash -c 'mv "$0" "aspx-code/$0.aspx.vb"' {} \;
 
 
 # TADOQuery
 #find -type f -name '*.txt' -exec grep -l "TADOQuery" {} \; -exec bash -c 'mv "$0" "delphi-code/$0"' {} \;
+# borland\bds\4.0\RBuilder
+#find -type f -name '*.txt' -exec grep -l "RBuilder" {} \; -exec bash -c 'mv "$0" "delphi-code/$0"' {} \;
 
+
+# BMT Orders Report - <SP_ORDER_NR></SP_ORDER_NR>
+ find -type f -name '*.txt' -exec grep -l "<SP_ORDER_NR>" {} \; -exec bash -c 'mv "$0" "bmt-orders-report/$0"' {} \;
+
+
+
+# Word.Document.8   - word 8 doc 
+
+# W o r k b o o k  - old xls spreadsheet
+
+# Microsoft Office Excel 2003 Worksheet
