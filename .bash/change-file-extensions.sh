@@ -137,18 +137,29 @@ find -maxdepth 1 -type f -name '*.txt' -exec grep -l "SPOOL ./ttms_log" {} \; -e
 # find -maxdepth 1 -type f -name '*.pdf' -exec grep -l "Initial Skills TRQI" {} \;
 
 
-# W o r k b o o k  - old xls spreadsheet
 
 # Microsoft Office Excel 2003 Worksheet
 
 # Performance Period  - appraisals
-find -type f -name '*.txt' -exec grep -l "Performance Period" {} \; -exec bash -c 'mv "$0" "appraisals/$0.word.8.doc"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Performance Period" {} \; -exec bash -c 'mv "$0" "appraisals/$0.word.8.doc"' {} \;
 
 
 # Word.Document.8   - word 8 doc 
-find -type f -name '*.txt' -exec grep -l "Word.Document.8" {} \; -exec bash -c 'mv "$0" "word-docs/$0.word.8.doc"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Word.Document.8" {} \; -exec bash -c 'mv "$0" "word-docs/$0.word.8.doc"' {} \;
 
 
 # word/document.xml
-find -type f -name '*.txt' -exec grep -l "word/document.xml" {} \; -exec bash -c 'mv "$0" "word-docs/$0.docx"' {} \;
+#find -type f -name '*.txt' -exec grep -l "word/document.xml" {} \; -exec bash -c 'mv "$0" "word-docs/$0.docx"' {} \;
+
+
+# adlstools.csd.disa.mil - ADLS Web Services
+find -type f -name '*.txt' -exec grep -l "adlstools.csd.disa.mil" {} \; -exec bash -c 'mv "$0" "adls/$0"' {} \;
+
+
+# W o r k b o o k  - old xls spreadsheet
+find -type f -name '*.txt' -exec grep -l " W o r k b o o k" {} \; -exec bash -c 'mv "$0" "spreadsheets/$0.xls"' {} \;
+
+# Microsoft Office Excel 2003 Worksheet
+find -type f -name '*.txt' -exec grep -l "Microsoft Office Excel 2003 Worksheet" {} \; -exec bash -c 'mv "$0" "spreadsheets/$0.2003.xls"' {} \;
+
 
