@@ -12,6 +12,7 @@
 #  Fix a terrible mess....
 
 # Step 1:
+# Turn off auto gc
 # create a working directory and cd to it
 # execute the following to extract all dangling commits as text file outputs into the working directory
 # for blob in $(git fsck --lost-found | awk '$2 == "blob" { print $3 }'); do git cat-file -p $blob > $blob.txt; done
@@ -33,6 +34,8 @@ DIR_PATH=/c/Users/1287921639E/Documents/blob-hack/
 
 
 cd $DIR_PATH
+
+echo pwd
 
 # simple example to get started from
 #find -type f -name '*.txt' -exec grep -l "Mirrored from www.delphibasics.co.uk" {} \;
@@ -106,12 +109,46 @@ cd $DIR_PATH
 
 
 # BMT Orders Report - <SP_ORDER_NR></SP_ORDER_NR>
- find -type f -name '*.txt' -exec grep -l "<SP_ORDER_NR>" {} \; -exec bash -c 'mv "$0" "bmt-orders-report/$0"' {} \;
+#find -type f -name '*.txt' -exec grep -l "<SP_ORDER_NR>" {} \; -exec bash -c 'mv "$0" "bmt-orders-report/$0"' {} \;
+
+# eclipse
+#find -maxdepth 1 -type f -name '*.txt' -exec grep -l "eclipse" {} \; -exec bash -c 'mv "$0" "eclipse/$0"' {} \;
 
 
 
-# Word.Document.8   - word 8 doc 
+# oracle table outputs - apex_search.rows.length
+#find -maxdepth 1 -type f -name '*.txt' -exec grep -l "apex_search.rows.length" {} \; -exec bash -c 'mv "$0" "oracle-outputs/$0.html"' {} \;
+
+# SPOOL ./ttms_log
+find -maxdepth 1 -type f -name '*.txt' -exec grep -l "SPOOL ./ttms_log" {} \; -exec bash -c 'mv "$0" "oracle-outputs/$0.spool.log"' {} \;
+
+# MS Help html pages
+# find -maxdepth 1 -type f -name '*.txt' -exec grep -l "Microsoft.Help.ContentType" {} \; -exec bash -c 'mv "$0" "ms-code-sample/$0.code.html"' {} \;
+
+# c# code files
+# find -maxdepth 1 -type f -name '*.txt' -exec grep -l "Page Language=\"C#\"" {} \; -exec bash -c 'mv "$0" "aspx-code/$0.c.aspx"' {} \;
+
+# Adobe Photoshop CC 2015
+# find -maxdepth 1 -type f -name '*.txt' -exec grep -l "Adobe Photoshop CC 2015" {} \; -exec bash -c 'mv "$0" "photoshop/$0"' {} \;
+
+
+# add -maxdepth 1 to prevent searching sub-directories
+# the pdf files can also be searched to allow renaming them based on the content !!
+# find -maxdepth 1 -type f -name '*.pdf' -exec grep -l "Initial Skills TRQI" {} \;
+
 
 # W o r k b o o k  - old xls spreadsheet
 
 # Microsoft Office Excel 2003 Worksheet
+
+# Performance Period  - appraisals
+find -type f -name '*.txt' -exec grep -l "Performance Period" {} \; -exec bash -c 'mv "$0" "appraisals/$0.word.8.doc"' {} \;
+
+
+# Word.Document.8   - word 8 doc 
+find -type f -name '*.txt' -exec grep -l "Word.Document.8" {} \; -exec bash -c 'mv "$0" "word-docs/$0.word.8.doc"' {} \;
+
+
+# word/document.xml
+find -type f -name '*.txt' -exec grep -l "word/document.xml" {} \; -exec bash -c 'mv "$0" "word-docs/$0.docx"' {} \;
+
