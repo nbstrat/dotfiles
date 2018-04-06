@@ -227,17 +227,110 @@ find -type f -name '*.txt' -exec grep -l "AjaxControlToolkit" {} \; -exec bash -
 
 #find -type f -name '*.txt' -exec grep -l "<BirtRequest>" {} \; -exec bash -c 'mv "$0" "$0.birt.log"' {} \;
 
-find -type f -name '*.txt' -exec grep -l "CREATE PUBLIC PLATEAU SYNONYM" {} \; -exec bash -c 'mv "$0" "$0.plateau.synonym.sql"' {} \;
-find -type f -name '*.txt' -exec grep -l "REPORT_COMPARISON" {} \; -exec bash -c 'mv "$0" "$0.bc.report.comparison"' {} \;
-find -type f -name '*.txt' -exec grep -l "rbReportTemplateVolume" {} \; -exec bash -c 'mv "$0" "$0.reportbuildder.pas"' {} \;
-find -type f -name '*.txt' -exec grep -l "sub_view subview_name" {} \; -exec bash -c 'mv "$0" "$0.datamodeler.xml"' {} \;
-find -type f -name '*.txt' -exec grep -l "mtomMessageEncoding" {} \; -exec bash -c 'mv "$0" "$0.mtom.xml"' {} \;
-find -type f -name '*.txt' -exec grep -l "ÿØÿà" {} \; -exec bash -c 'mv "$0" "$0.jpeg"' {} \;
-find -type f -name '*.txt' -exec grep -l "Microsoft Project" {} \; -exec bash -c 'mv "$0" "$0.msproject.mpp"' {} \;
-find -type f -name '*.txt' -exec grep -l "UIDES" {} \; -exec bash -c 'mv "$0" "$0.alis.uides.xml"' {} \;
-find -type f -name '*.txt' -exec grep -l "generator Microsoft Word 11.0.8134" {} \; -exec bash -c 'mv "$0" "$0.rtf"' {} \;
-find -type f -name '*.txt' -exec grep -l "CREATEOR REPLACE PACKAGE" {} \; -exec bash -c 'mv "$0" "$0.package.sql"' {} \;
-find -type f -name '*.txt' -exec grep -l "ViewerStyle.pas" {} \; -exec bash -c 'mv "$0" "$0.delphiviewer.pas"' {} \;
+#find -type f -name '*.txt' -exec grep -l "CREATE PUBLIC PLATEAU SYNONYM" {} \; -exec bash -c 'mv "$0" "$0.plateau.synonym.sql"' {} \;
+#find -type f -name '*.txt' -exec grep -l "REPORT_COMPARISON" {} \; -exec bash -c 'mv "$0" "$0.bc.report.comparison"' {} \;
+#find -type f -name '*.txt' -exec grep -l "rbReportTemplateVolume" {} \; -exec bash -c 'mv "$0" "$0.reportbuildder.pas"' {} \;
+#find -type f -name '*.txt' -exec grep -l "sub_view subview_name" {} \; -exec bash -c 'mv "$0" "$0.datamodeler.xml"' {} \;
+#find -type f -name '*.txt' -exec grep -l "mtomMessageEncoding" {} \; -exec bash -c 'mv "$0" "$0.mtom.xml"' {} \;
+#find -type f -name '*.txt' -exec grep -l "ÿØÿà" {} \; -exec bash -c 'mv "$0" "$0.jpeg"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Microsoft Project" {} \; -exec bash -c 'mv "$0" "$0.msproject.mpp"' {} \;
+#find -type f -name '*.txt' -exec grep -l "UIDES" {} \; -exec bash -c 'mv "$0" "$0.alis.uides.xml"' {} \;
+#find -type f -name '*.txt' -exec grep -l "generator Microsoft Word 11.0.8134" {} \; -exec bash -c 'mv "$0" "$0.rtf"' {} \;
+#find -type f -name '*.txt' -exec grep -l "CREATEOR REPLACE PACKAGE" {} \; -exec bash -c 'mv "$0" "$0.package.sql"' {} \;
+#find -type f -name '*.txt' -exec grep -l "ViewerStyle.pas" {} \; -exec bash -c 'mv "$0" "$0.delphiviewer.pas"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "<ajaxToolkit" {} \; -exec bash -c 'mv "$0" "$0.ajaxtoolkit.aspx"' {} \;
+# plugin.properties
+#find -type f -name '*.txt' -exec grep -l "plugin.properties" {} \; -exec bash -c 'mv "$0" "$0.pluginproperties"' {} \;
+#find -type f -name '*.txt' -exec grep -l "P o w e r P o i n t   D o c u m e n t" {} \; -exec bash -c 'mv "$0" "$0.ppt"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Hello World" {} \; -exec bash -c 'mv "$0" "$0.helloworld"' {} \;
+#find -type f -name '*.txt' -exec grep -l "providerName=\"System.Data.OracleClient\"" {} \; -exec bash -c 'mv "$0" "$0.web.config"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "msdata:IsDataSet" {} \; -exec bash -c 'mv "$0" "$0.webservice.msdata.xml"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Û¥-" {} \; -exec bash -c 'mv "$0" "$0.word.2.0.doc"' {} \;
+
+# attempting multiple pattern matching
+#find -type f -name '*.txt' -exec grep -e "oraclsra10.dll\|PK" {} \; -exec bash -c 'mv "$0" "$0.oraclsra10.jar"' {} \;
+
+#find -type f -name '*.txt' -exec grep -e "MZ\|This program cannot be run in DOS mode" {} \; -exec bash -c 'mv "$0" "$0.dll"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "Partial Class" {} \; -exec bash -c 'mv "$0" "$0.code"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "System.Web.Services.Protocols" {} \; -exec bash -c 'mv "$0" "$0.web.service.code"' {} \;
+#find -type f -name '*.txt' -exec grep -l "ReportBuilder Class Library" {} \; -exec bash -c 'mv "$0" "$0.rb.pas"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Digital Metaphors Corporation" {} \; -exec bash -c 'mv "$0" "$0.rb.pas"' {} \;
+#find -type f -name '*.txt' -exec grep -l "CREATE OR REPLACE FUNCTION" {} \; -exec bash -c 'mv "$0" "$0.function.sql"' {} \;
+#find -type f -name '*.txt' -exec grep -l "TppReport" {} \; -exec bash -c 'mv "$0" "$0.delphi.rtm"' {} \;
+
+
+#find -type f -name '*.txt' -exec grep -l "<STUDENTEMAILADDRESS>bob@isp.com" {} \; -exec bash -c 'mv "$0" "$0.fakedata.xml"' {} \;
+#find -type f -name '*.txt' -exec grep -l "CREATE OR REPLACE TYPE" {} \; -exec bash -c 'mv "$0" "$0.type.sql"' {} \;
+#find -type f -name '*.txt' -exec grep -l "alis_test.asmx" {} \; -exec bash -c 'mv "$0" "$0.alis.xml"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "DotNetZip.codeplex.com" {} \; -exec bash -c 'mv "$0" "$0.dotnetzip.code"' {} \;
+#find -type f -name '*.txt' -exec grep -l "MEDICAL PROCESSING" {} \; -exec bash -c 'mv "$0" "$0.medical.processing.rtf"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "CREATE TABLE" {} \; -exec bash -c 'mv "$0" "$0.table.sql"' {} \;
+#find -type f -name '*.txt' -exec grep -l "AF FORM 10" {} \; -exec bash -c 'mv "$0" "$0.afform10.rtf"' {} \;
+#find -type f -name '*.txt' -exec grep -l "DEFINE SPOOL" {} \; -exec bash -c 'mv "$0" "$0.spool"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Microsoft Exchange Server" {} \; -exec bash -c 'mv "$0" "$0.email.msg"' {} \;
+#find -type f -name '*.txt' -exec grep -l "ttmsint" {} \; -exec bash -c 'mv "$0" "$0.ttmsint.code"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "dmReportArchiveVolume" {} \; -exec bash -c 'mv "$0" "$0.VolumeController.delphi.pas"' {} \;
+#find -type f -name '*.txt' -exec grep -l "<appSettings>" {} \; -exec bash -c 'mv "$0" "$0.appSettings.web.config"' {} \;
+#find -type f -name '*.txt' -exec grep -l "SELECT" {} \; -exec bash -c 'mv "$0" "$0.SELECT.sql"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "DotNetZip" {} \; -exec bash -c 'mv "$0" "$0.dotnetzip.code"' {} \;
+#find -type f -name '*.txt' -exec grep -l "GetTTMSDataResponse" {} \; -exec bash -c 'mv "$0" "$0.atrrs.code.xml"' {} \;
+#find -type f -name '*.txt' -exec grep -l "TRANSID" {} \; -exec bash -c 'mv "$0" "$0.atrrs.data"' {} \;
+#find -type f -name '*.txt' -exec grep -l "ScriptManager" {} \; -exec bash -c 'mv "$0" "$0.ajaxtoolkit.code"' {} \;
+#find -type f -name '*.txt' -exec grep -l "<html><head>" {} \; -exec bash -c 'mv "$0" "$0.htm"' {} \;
+#find -type f -name '*.txt' -exec grep -l "CodeBehind" {} \; -exec bash -c 'mv "$0" "$0.codebehind.aspx"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Training Entrance Date:" {} \; -exec bash -c 'mv "$0" "$0.entryexport.rtf"' {} \;
+find -type f -name '*.txt' -exec grep -l "wsTestAuthWebService.wsdl" {} \; -exec bash -c 'mv "$0" "$0.webservice.atrrs.xml"' {} \;
+
+
+# ------------------------------------------------------------
+#this did not work
+#find -type f -name '*.txt' -exec grep -l "ü©ñÒMbP" {} \; -exec bash -c 'mv "$0" "$0.rb.rtm' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "BorlandProject" {} \; -exec bash -c 'mv "$0" "$0.borland.project.xml"' {} \;
+#find -type f -name '*.txt' -exec grep -l "PS_WORKFLOW" {} \; -exec bash -c 'mv "$0" "$0.jm.workflow"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "ATRRS_CLASS" {} \; -exec bash -c 'mv "$0" "$0.atrrs.report.txt"' {} \;
+#find -type f -name '*.txt' -exec grep -l "ACTION_TSTMP" {} \; -exec bash -c 'mv "$0" "$0.data"' {} \;
+#find -type f -name '*.txt' -exec grep -e "ü©ñÒMbP\|SSAN" {} \; -exec bash -c 'mv "$0" "$0.report.output"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Microsoft Office PowerPoint" {} \; -exec bash -c 'mv "$0" "$0.PowerPoint.ppt"' {} \;
+#find -type f -name '*.txt' -exec grep -l "CREATE OR REPLACE PACKAGE" {} \; -exec bash -c 'mv "$0" "$0.package.sql"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Microsoft Visio" {} \; -exec bash -c 'mv "$0" "$0.visio.vsd"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Visio (TM) Drawing" {} \; -exec bash -c 'mv "$0" "$0.visiodrawing.vsd"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "ansicpg1252" {} \; -exec bash -c 'mv "$0" "$0.report.rtf"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "TRAINING_LINE_NUMBER" {} \; -exec bash -c 'mv "$0" "$0.reportoutput.txt"' {} \;
+#find -type f -name '*.txt' -exec grep -l "MILITARY_STATUS" {} \; -exec bash -c 'mv "$0" "$0.reportoutput.txt"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "Insert into" {} \; -exec bash -c 'mv "$0" "$0.Insert.sql"' {} \;
+#find -type f -name '*.txt' -exec grep -l "insert into" {} \; -exec bash -c 'mv "$0" "$0.insert.sql"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Ionic.Zip.Forms" {} \; -exec bash -c 'mv "$0" "$0.ionic.txt"' {} \;
+#find -type f -name '*.txt' -exec grep -l "runat=\"server\"" {} \; -exec bash -c 'mv "$0" "$0.aspx"' {} \;
+#find -type f -name '*.txt' -exec grep -l "getADLStoTTMS" {} \; -exec bash -c 'mv "$0" "$0.ws.adls.xml"' {} \;
+
+
+#find -type f -name '*.txt' -exec grep -l "Slide Titles" {} \; -exec bash -c 'mv "$0" "$0.slid.titles.ppt"' {} \;
+
+#find -type f -name '*.txt' -exec grep -l "GIF87" {} \; -exec bash -c 'mv "$0" "$0.gif"' {} \;
+#find -type f -name '*.txt' -exec grep -l "Database Snapshot" {} \; -exec bash -c 'mv "$0" "$0.db.snapshot.txt"' {} \;
+#find -type f -name '*.txt' -exec grep -l "A:link" {} \; -exec bash -c 'mv "$0" "$0.css"' {} \;
+#find -type f -name '*.txt' -exec grep -l "using Ionic.Zlib" {} \; -exec bash -c 'mv "$0" "$0.ionic.code"' {} \;
+
+
+find -type f -name '*.txt' -exec grep -l " v   " {} \; -exec bash -c 'mv "$0" "$0.v.unidentifiable"' {} \;
+
+
+
+
+
 
 
 
