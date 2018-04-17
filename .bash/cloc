@@ -6251,6 +6251,7 @@ sub set_constants {                          # {{{1
             'p'           => 'Pascal'                ,
             'pp'          => 'Pascal/Puppet'         ,
             'psql'        => 'SQL'                   ,
+            'pls'         => 'SQL'                   , # Oracle PLS package file
             'py'          => 'Python'                ,
             'pyj'         => 'RapydScript'           ,
             'pyx'         => 'Cython'                ,
