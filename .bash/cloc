@@ -11,7 +11,14 @@
 #    ./cloc <path to file or directory>
 #    e.g. ./cloc /c/_projects/ebmtapi
 #
-#    From within an existing working directory:
+#    
+#   CSV output example:
+#   From bash shell:
+#   ./cloc /c/PVCS/Course_Development/Web_Application_Server/ --csv cloc
+#
+#
+#
+#   From within an existing working directory:
 #      <path to cloc file> <commit hash>
 #     /c/Users/1287921639E/.bash/cloc 32f281f0
 #     
