@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# Adds the branch name to the commit message before editting to allow modifications.
+#
+# Reference: https://stackoverflow.com/questions/5894946/how-to-add-gits-branch-name-to-the-commit-message
+#
+
+# Automatically adds branch name and branch description to every commit message.
+#
+NAME=$(git branch | grep '*' | sed 's/* //') 
+DESCRIPTION=$(git config branch."$NAME".description)
+
+echo "$NAME"': '$(cat "$1") > "$1"
+if [ -n "$DESCRIPTION" ] 
+then
+   echo "" >> "$1"
+   echo $DESCRIPTION >> "$1"
+fi 
