@@ -54,9 +54,9 @@ set circleoutlinecolor SystemWindowText
 set geometry(main) 1680x943+0+27
 set geometry(state) zoomed
 set geometry(topwidth) 1680
-set geometry(topheight) 266
-set geometry(pwsash0) "892 1"
-set geometry(pwsash1) "1064 1"
-set geometry(botwidth) 1375
-set geometry(botheight) 672
+set geometry(topheight) 205
+set geometry(pwsash0) "1107 1"
+set geometry(pwsash1) "1299 1"
+set geometry(botwidth) 1208
+set geometry(botheight) 733
 set permviews {}

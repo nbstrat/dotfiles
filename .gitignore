@@ -5,6 +5,7 @@
 [Cc]ontacts*/
 Desktop/
 Documents/
+My Documents/
 Downloads/
 Favorites/
 IntelGraphicsProfiles/
@@ -43,6 +44,7 @@ vESD/
 VC/
 VET/
 devtools/
+MyDocs/
 
 # my worklog output file
 worklog.txt

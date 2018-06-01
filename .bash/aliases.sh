@@ -17,12 +17,16 @@ alias dlog='git log --decorate --name-only --diff-filter=D --format="%C(auto)%h%
 #alias go='git checkout'
 alias vim='gvim'
 
-#ttmsdocs shortcuts
-alias docscommit='git commit -m "TTMS documentation changes"' 
+# ttmsdocs and pvcs auto-commits
+alias commitdocs='cd $HOME/.bash/ && ./ttms-documents-commit.sh'
+alias commitpvcs='cd $HOME/.bash/ && ./ttms-pvcs-commit.sh'
 
 
+# repo backup 
+alias runbackups='cd $HOME/.bash/ && ./backup-remote-repos.sh'
 
 # cd location aliases
+alias atrrs='cd /c/_projects/atrrs'
 alias bmt='cd /c/_projects/bmt'
 alias cognos='cd /c/_projects/cognos'
 alias reports='cd /c/_projects/custom_reports'
@@ -30,11 +34,13 @@ alias dashboard='cd /c/_projects/dashboard'
 alias smapp='cd /c/_projects/datagrid'
 alias ebmt='cd /c/_projects/ebmt'
 alias ebmtapi='cd /c/_projects/ebmtapi'
+alias ebmtappdev='cd /c/3MHIS/ebmtapp'
 alias ebmtapp='cd /c/_projects/ebmtapp'
 alias ebmtdb='cd /c/_projects/ebmtdb'
 alias smapi='cd /c/_projects/smapi'
 alias smdb='cd /c/_projects/smdb'
 alias mtldb='cd /c/_projects/mtldb'
+alias mydocs='cd $HOME/Documents'
 alias npmroaming='cd /c/Users/1287921639E/AppData/Roaming/npm'alias mtldb='cd /c/_projects/mtldb'
 alias npmdev='cd /c/_projects/AppData/Roaming/npm'
 alias npmroaming='cd /c/Users/1287921639E/AppData/Roaming/npm'

@@ -52,6 +52,7 @@ repo_list=( 'AIMS.git'
              'atdb.git'
              'atws.git'
              'bmt.git'
+             'cognos.git'
              'custom_reports.git'
              'datagrid.git'
              'ebmt.git'
@@ -65,7 +66,9 @@ repo_list=( 'AIMS.git'
              'sm.git'
              'smdb.git'
              'smapi.git'
-#             'ttms-documentation.git'
+             'sso.git'
+             'ssodb.git'
+             'ttms-documentation.git'
            )
 
 
@@ -119,8 +122,10 @@ function backupFailureMessage() {
   printf "\n"
   echo "Git Backup Failed."
   echo " Possible reasons are that the alias 'backup' has not been defined on the local repository."
-  echo " To define a backup alias, use the following example:"
+  echo " To verify that a backup alias has been defined:"
   echo "    cd ${LOCAL_PATH}${1}"
+  echo "    git remote -v"
+  echo " To define a backup alias, use the following example:"
   echo "    git remote add --mirror=push backup ${REMOTE_PATH}${1}"
 
 }
