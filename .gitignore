@@ -2,7 +2,9 @@
 # standard windows workstation directories
 /3D Objects/
 /AppData/
+/Application Data/
 [Cc]ontacts*/
+/Cookies/
 Desktop/
 Documents/
 My Documents/
@@ -10,13 +12,19 @@ Downloads/
 Favorites/
 IntelGraphicsProfiles/
 Links/
+/Local Settings/
 /MicrosoftEdgeBackups/
 Music/
+/NetHood/
 OneDrive/
 Oracle/
 Pictures/
+/PrintHood/
 Saved Games/
 Searches/
+/SendTo/
+/Start Menu/
+/Templates/
 Videos/
 
 # appleCrap
