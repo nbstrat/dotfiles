@@ -1,5 +1,6 @@
 
 # standard windows workstation directories
+/3D Objects/
 /AppData/
 [Cc]ontacts*/
 Desktop/
@@ -8,6 +9,7 @@ Downloads/
 Favorites/
 IntelGraphicsProfiles/
 Links/
+/MicrosoftEdgeBackups/
 Music/
 OneDrive/
 Oracle/
@@ -18,6 +20,17 @@ Videos/
 
 # appleCrap
 /iCloudDrive
+
+# Atom editor
+/.atom/
+
+# ruby / jekyll related ?
+/.bundle/
+.csslintrc
+.eslintrc
+/.gem/
+coffeelint.json
+tslint.json
 
 # ntuser folders/files
 NTUSER.DATE*
