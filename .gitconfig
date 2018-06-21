@@ -46,9 +46,10 @@
 [difftool "kdiff3"]
 	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
 [filter "lfs"]
-	smudge = git-lfs smudge %f
+	smudge = git-lfs smudge -- %f
 	required = true
-	clean = git-lfs clean %f
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
 [pack]
   deltaCacheSize = 128m
   packSizeLimit = 128m
@@ -59,4 +60,6 @@
 [includeIf "gitdir:C:/3MHIS/"]
     path = .gitconfig-work
 [credential]
-	helper = wincred
+	helper = manager
+[http]
+	postBuffer = 524288000
