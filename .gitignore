@@ -73,3 +73,6 @@ vimfiles/.netrwhist
 SQL Developer Export Files
 *export.htm
 *export.sql
+
+# ignore ssh certs
+/.ssh
