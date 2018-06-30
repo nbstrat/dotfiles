@@ -86,8 +86,6 @@ vimfiles/.netrwhist
 /.vs/
 
 #misc
-nbstrat_id_rsa
-nbstrat_id_rsa.pub
 .AndroidStudio/
 .android/
 *.log
