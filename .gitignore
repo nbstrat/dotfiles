@@ -59,11 +59,8 @@ Tracing/
 ubuntu/
 
 # todo - why are these still hanging around?
-_skills_usa_app/
 Pass4Sure/
 .gradle/
-.oracle_jre_usage/
-WNDR4500_Firmware_Version_1.0.1.6
 DevelopmentStorageDb21.mdf
 DevelopmentStorageDb21_log.ldf
 
