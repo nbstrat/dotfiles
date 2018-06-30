@@ -1,4 +1,3 @@
-
 # standard windows workstation directories
 /3D Objects/
 /AppData/
@@ -50,9 +49,24 @@ ntuser*
 vESD/
 
 # my custom directories
+AndroidStudioProjects/
+Box Sync/
 VC/
 devtools/
+Google Drive/
 MyDocs/
+Tracing/
+ubuntu/
+
+# todo - why are these still hanging around?
+_skills_usa_app/
+Pass4Sure/
+.gradle/
+.oracle_jre_usage/
+WNDR4500_Firmware_Version_1.0.1.6
+DevelopmentStorageDb21.mdf
+DevelopmentStorageDb21_log.ldf
+
 
 # my worklog output file
 worklog.txt
@@ -69,6 +83,24 @@ vimfiles/.netrwhist
 # visual studio
 /.dotnet
 /.nuget
+/.vs/
+
+#misc
+nbstrat_id_rsa
+nbstrat_id_rsa.pub
+.AndroidStudio/
+.android/
+*.log
+Virtual Machines/
+.webextensionpack
+.gitconfig.backup
+JsDocComments.js
+Modern.Intellisense.js
+
+
+# windows poop
+Thumbs.db
+.thumbnails/
 
 SQL Developer Export Files
 *export.htm
