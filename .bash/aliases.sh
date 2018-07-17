@@ -56,6 +56,7 @@ alias gitcheats='vim $HOME/Documents/CheatSheets_Reference/Git/git-cheats.txt'
 # other stuff
 alias vs='"/c/Program Files (x86)/Microsoft Visual Studio 12.0/Common7/IDE/devenv.exe"'
 alias cmd='"%windir%\system32\cmd.exe"'
+alias ps='"/c/windows/system32/windowspowershell/v1.0/powershell.exe"'
 alias worklog='vim $HOME/worklog.txt'
 alias dash='clear &&  ls -l && echo && git branch && echo && git status --short --branch'
 #alias dn='git status --short --branch | grep '^.[DM\?]' | head -1 | awk '$1 ~ /[MD]/ {print $2} $1 ~ /\?/ {print "/dev/null " $2}' | xargs git diff -- && w'
