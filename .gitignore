@@ -52,6 +52,7 @@ vESD/
 AndroidStudioProjects/
 Box Sync/
 VC/
+/cac-cert/
 devtools/
 Google Drive/
 MyDocs/
@@ -104,3 +105,5 @@ SQL Developer Export Files
 
 # ignore ssh certs
 /.ssh
+
+.rnd
