@@ -39,7 +39,7 @@
 #----------------------------------------------------------------------------------------
 
 # Define the path to the local repository directory.
-LOCAL_PATH=//52MAHG-MP-806/Source\$/
+LOCAL_PATH=//MAHG-MP-783v/source/
 
 
 # Define the path to the remote backup repository directory
@@ -64,10 +64,11 @@ repo_list=( 'AIMS.git'
              'ebmtapp.git'
              'ebmtdb.git'
              'eocdb.git'
+             'eocws.git'
              'ICIS.git'
              'mtldb.git'
              'pvcs-ttms.git'
-             'sm.git'
+             'sm-plateau.git'
              'smdb.git'
              'smapi.git'
              'sso.git'
