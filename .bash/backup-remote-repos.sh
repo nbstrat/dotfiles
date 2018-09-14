@@ -46,7 +46,6 @@ LOCAL_PATH=//MAHG-MP-783v/source/
 # Define the path to the remote backup repository directory
 REMOTE_PATH=//52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Source/
 
-# todo - configure jobmatch repo and add to this backup script
 # todo - configure METC repo and add to this backup script
 # todo - configure METC_OracleProvider repo and add to this backup script
 # todo - configure MICIS_OracleProvider repo and add to this backup script
@@ -67,6 +66,8 @@ repo_list=( 'AIMS.git'
              'eocdb.git'
              'eocws.git'
              'ICIS.git'
+             'jobmatch.git'
+             'metc.git' 
              'mtldb.git'
              'pvcs-ttms.git'
              'sm-plateau.git'
