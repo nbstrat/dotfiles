@@ -46,7 +46,6 @@ LOCAL_PATH=//MAHG-MP-783v/source/
 # Define the path to the remote backup repository directory
 REMOTE_PATH=//52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Source/
 
-# todo - configure ICIS_OracleProvider repo and add to this backup script
 
 # Create an array of the git repositories that will be backed up to the remote location.
 repo_list=( 'AIMS.git'
@@ -64,6 +63,7 @@ repo_list=( 'AIMS.git'
              'eocdb.git'
              'eocws.git'
              'ICIS.git'
+             'ICIS_OracleProvider.git'
              'jobmatch.git'
              'metc.git'
              'METC_OracleProvider.git' 
