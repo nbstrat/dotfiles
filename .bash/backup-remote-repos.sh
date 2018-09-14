@@ -76,6 +76,7 @@ repo_list=( 'AIMS.git'
              'ssodb.git'
              'ttms-software-license.git'
              'ttms-documentation.git'
+             'UploadService.git'
            )
 
 
