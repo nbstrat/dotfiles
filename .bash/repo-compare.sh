@@ -16,7 +16,7 @@
 # Each origin repo MUST have a bare repository created on the remote location.
 #   e.g.
 #      cd //52MAHG-MP-806/Source\$/<repo>.git
-#      git init --bare //52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Source/<repo>.git
+#      git init --bare e//52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Source//52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Source/<repo>.git
 #
 # Each origin repo MUST have an alias named 'backup' created refercening a bare repository at the remote location.
 #    e.g.
@@ -39,13 +39,14 @@
 #----------------------------------------------------------------------------------------
 
 # Define the path to the local repository directory.
-LOCAL_PATH=//52MAHG-MP-806/Source\$/
+LOCAL_PATH=//MAHG-MP-783v/source/
+
 
 
 # Define the path to the remote backup repository directory
 REMOTE_PATH=//52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Source/
 
-# todo - configure jobmatch repo and add to this backup script
+
 # Create an array of the git repositories that will be compared.
 repo_list=( 'AIMS.git'
              'AppDataRoaming-npm.git'
@@ -55,21 +56,28 @@ repo_list=( 'AIMS.git'
              'cognos.git'
              'custom_reports.git'
              'datagrid.git'
-             'ebmt.git'
+             'ebmt-sched.git'
              'ebmtapi.git'
              'ebmtapp.git'
              'ebmtdb.git'
              'eocdb.git'
+             'eocws.git'
              'ICIS.git'
+             'icisdb.git'
+             'ICIS_OracleProvider.git'
+             'jobmatch.git'
+             'metc.git'
+             'METC_OracleProvider.git' 
              'mtldb.git'
              'pvcs-ttms.git'
-             'sm.git'
+             'sm-plateau.git'
              'smdb.git'
              'smapi.git'
              'sso.git'
              'ssodb.git'
              'ttms-software-license.git'
              'ttms-documentation.git'
+             'UploadService.git'
            )
 
 
