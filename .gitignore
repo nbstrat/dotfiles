@@ -107,3 +107,6 @@ SQL Developer Export Files
 /.ssh
 
 .rnd
+
+# swap files
+*.swp
