@@ -50,6 +50,9 @@ alias npmroaming='cd /c/Users/1287921639E/AppData/Roaming/npm'
 alias release='cd /c/_projects/release-repo'
 alias ttmsdocs='cd /j/TTMS_Documentation'
 
+# home pc aliases
+alias briefcase='cd /c/_projects/briefcase/' 
+
 
 # open specific files in vim
 alias gridcheats='vim $HOME/Documents/CheatSheets_Reference/datagrid-cheats.txt'
