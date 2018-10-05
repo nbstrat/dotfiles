@@ -50,6 +50,7 @@ REMOTE_PATH=//52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Sour
 # Create an array of the git repositories that will be backed up to the remote location.
 repo_list=( 'AIMS.git'
              'AppDataRoaming-npm.git'
+             'apiauth.git'
              'atdb.git'
              'atws.git'
              'bmt.git'
