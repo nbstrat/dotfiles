@@ -9,7 +9,7 @@
 #  Date: 22-Oct-2017
 #
 #  Purpose:
-#  Deliver files from build directory to remote server.
+#  Deliver files from build directory to delivery server.
 #
 #
 # Use:
@@ -22,16 +22,17 @@
 #
 #----------------------------------------------------------------------------------------
 
-# Define the path to the local repository directory.
-BUILD_PATH=/c/_projects/dashboard/js
+# Define the path to the source file output directory.
+BUILD_PATH=/j/Handoff/Shane/js/
 
 
-# Define the path to the remote backup repository directory
-REMOTE_PATH=/c/remoteDirectory/
+# Define the path to the delivery directory
+DELIVERY_PATH=//mahg-mp-787v/c\$/inetpub/wwwroot/shaneTestDirectory/
 
 
-
-
+#--------------------------------------------------------------------
+# Line Function and Start/End runtime outputs
+#--------------------------------------------------------------------
 # print a hash line
 printf -v line '%*s' 40
 echo ${line// /-}
@@ -56,12 +57,13 @@ function showRunTime() {
   echo ${line// /-}
 }
 
-
-
+#--------------------------------------------------------------------
+# Remote Path Check and Error Message
+#--------------------------------------------------------------------
 # Verifies that the remote location exists.
 function checkRemotePath() {
   echo Checking that remote path exists ...
-  if [ -e $REMOTE_PATH/$1 ]; then
+  if [ -e $DELIVERY_PATH/$1 ]; then
     echo "    remote path exist !"
     return
   else
@@ -70,16 +72,17 @@ function checkRemotePath() {
   fi
 }
 
-
-
 function remoteFailureMessage() {
   printf "\n"
   echo "Remote Location Not Found."
-  echo "  The expected path was: ${REMOTE_PATH}"
+  echo "  The expected path was: ${DELIVERY_PATH}"
   echo "  Files were not transferred."
 }
 
- # Do the work....  
+
+#--------------------------------------------------------------------
+# Do the work....
+#--------------------------------------------------------------------
  # Call the function to check that remote repo exist
  checkRemotePath
  status=$?
@@ -89,7 +92,7 @@ function remoteFailureMessage() {
     
    
     #copy the build files to the remote path     
-    cp $BUILD_PATH $REMOTE_PATH -rv
+    cp $BUILD_PATH $DELIVERY_PATH -rv
     showRunTime
   
   else
