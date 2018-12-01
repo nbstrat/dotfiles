@@ -15,7 +15,7 @@
 # Add the repositories name in the repo_list array below. 
 # Each origin repo MUST have a bare repository created on the remote location.
 #   e.g.
-#      cd //52MAHG-MP-806/Source\$/<repo>.git
+#      cd //MAHG-MP-783v/source/<repo>.git
 #      git init --bare //52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Source/<repo>.git
 #
 # Each origin repo MUST have an alias named 'backup' created refercening a bare repository at the remote location.
@@ -50,6 +50,7 @@ REMOTE_PATH=//52mpls-mp-740/e\$/Keesler_Offsite_Backup/52mahg-mp-806/d/java/Sour
 # Create an array of the git repositories that will be backed up to the remote location.
 repo_list=( 'AIMS.git'
              'AppDataRoaming-npm.git'
+             'apiauth.git'
              'atdb.git'
              'atws.git'
              'bmt.git'
@@ -65,6 +66,7 @@ repo_list=( 'AIMS.git'
              'ICIS.git'
              'icisdb.git'
              'ICIS_OracleProvider.git'
+             'installshieldprojects.git'
              'jobmatch.git'
              'metc.git'
              'METC_OracleProvider.git' 

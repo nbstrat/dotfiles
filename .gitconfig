@@ -62,3 +62,7 @@
 	helper = manager
 [http]
 	postBuffer = 524288000
+
+# Show all untracked files instead of just the directory name
+[status]
+	showUntrackedFiles = all
