@@ -10,8 +10,8 @@
 	autocrlf = true
 	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
 	longpaths = true
-  packedGitLimit = 128m
-  packedGitWindowSize = 128m
+	packedGitLimit = 128m
+	packedGitWindowSize = 128m
 	excludesfile = C:/Users/1287921639E/.gitignore_global
 [difftool "sourcetree"]
 	cmd = 'C:/Program Files (x86)/KDiff3/kdiff3.exe' \"$LOCAL\" \"$REMOTE\"
@@ -42,23 +42,22 @@
 	plain = red normal dim
 	local = white normal bold
 [mergetool "kdiff3"]
-	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+	path = C:/Program Files/KDiff3/kdiff3.exe
 [difftool "kdiff3"]
-	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+	path = C:/Program Files/KDiff3/kdiff3.exe
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	required = true
 	clean = git-lfs clean -- %f
 	process = git-lfs filter-process
 [pack]
-  deltaCacheSize = 128m
-  packSizeLimit = 128m
+	deltaCacheSize = 128m
+	packSizeLimit = 128m
 	windowMemory = 512m
-
 [includeIf "gitdir:C:/_projects/"]
-    path = .gitconfig-work
+	path = .gitconfig-work
 [includeIf "gitdir:C:/3MHIS/"]
-    path = .gitconfig-work
+	path = .gitconfig-work
 [credential]
 	helper = manager
 [http]
