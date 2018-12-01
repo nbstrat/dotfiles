@@ -110,3 +110,6 @@ SQL Developer Export Files
 
 # swap files
 *.swp
+
+# VSCode IDE
+.vscode
