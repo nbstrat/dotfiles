@@ -13,10 +13,6 @@
 	packedGitLimit = 128m
 	packedGitWindowSize = 128m
 	excludesfile = C:/Users/1287921639E/.gitignore_global
-[difftool "sourcetree"]
-	cmd = 'C:/Program Files (x86)/KDiff3/kdiff3.exe' \"$LOCAL\" \"$REMOTE\"
-[mergetool "sourcetree"]
-	cmd = 'C:/Program Files (x86)/KDiff3/kdiff3.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 	trustExitCode = true
 [merge]
 	tool = kdiff3
