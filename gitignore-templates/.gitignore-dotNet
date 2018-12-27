@@ -69,7 +69,7 @@ lint.db
 *.tex.undo
 
 # NuGet
-packages/
+**/packages/
 
 # npm ignore
 npm-debug.log
@@ -83,3 +83,10 @@ node_modules/
 Thumbs.db
 .DS_Store
 !libs/*/[Bb]in/
+
+# Ignore all .vs subdirectories in the solution
+**/.vs/*
+
+# Include the .vs/config directory to retain specific application configuration settings 
+# such as SslNegotiateCert that may be needed for debugging the application locally.
+!**/.vs/config/
