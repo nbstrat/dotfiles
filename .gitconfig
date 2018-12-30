@@ -13,10 +13,6 @@
 	packedGitLimit = 128m
 	packedGitWindowSize = 128m
 	excludesfile = C:/Users/1287921639E/.gitignore_global
-[difftool "sourcetree"]
-	cmd = 'C:/Program Files (x86)/KDiff3/kdiff3.exe' \"$LOCAL\" \"$REMOTE\"
-[mergetool "sourcetree"]
-	cmd = 'C:/Program Files (x86)/KDiff3/kdiff3.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 	trustExitCode = true
 [merge]
 	tool = kdiff3
@@ -41,10 +37,13 @@
 	current = green normal bold
 	plain = red normal dim
 	local = white normal bold
+[color "interactive"]
+	error = red bold
+	prompt = green normal bold
 [mergetool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
 [difftool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	required = true
@@ -62,7 +61,5 @@
 	helper = manager
 [http]
 	postBuffer = 524288000
-
-# Show all untracked files instead of just the directory name
 [status]
 	showUntrackedFiles = all
