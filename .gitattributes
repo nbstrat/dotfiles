@@ -1,0 +1,2 @@
+# Omit this file from GitHubs language detection
+.bash/cloc linguist-vendored
