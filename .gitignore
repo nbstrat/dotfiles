@@ -45,8 +45,9 @@ tslint.json
 NTUSER.DATE*
 ntuser*
 
-# gov bs ?
+# gov bs
 vESD/
+mcafee dlp quarantined files/
 
 # my custom directories
 AndroidStudioProjects/
