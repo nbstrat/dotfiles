@@ -50,7 +50,7 @@ if ($SITE -eq "KAFB") {
    Write-Host "Reports Server Inetpub"
    $OUTPUTFILE = $OUTPUTPATH + '_hash.test.txt'
    Get-ChildItem -Path c:\_projects\custom_reports\_deliverables,c:\_projects\custom_reports\`{tomcat_home`} -Recurse `
-    -Exclude *.ico,*.css | 
+    -Exclude *.xml,*.tmp,*.txt,*.pdf | 
      Sort-Object Directory, Name |
      Select-Object @{n='RootDirectory     ';ex={$_.Directory.name}},Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | 
      Out-File -Width $OUTPUTWIDTH -FilePath $OUTPUTFILE
