@@ -28,12 +28,13 @@ Get-Help .\GetHash.ps1 -parameter SITE
 #> 
 
 
-
 param (
  [Parameter(Mandatory= $true)] 
  [string] $SITE
 )
 
+# Set output width to max integer to prevent ellipsis output
+$OUTPUTWIDTH = 2147483647
 
 if ($SITE -eq "KAFB") {
     Write-Host "KAFB"
@@ -46,7 +47,8 @@ if ($SITE -eq "KAFB") {
    Get-ChildItem -Path c:\_projects\custom_reports\_deliverables,c:\_projects\custom_reports\`{tomcat_home`} -Recurse `
     -Exclude *.ico,*.css | 
      Sort-Object Directory, Name |
-     Select-Object @{n='RootDirectory123456789';ex={$_.Directory.name}},FullName,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | Out-File -Width 2147483647 -FilePath C:\Users\1287921639E\.bash\hash-output\hash.test.txt
+     Select-Object @{n='RootDirectory     ';ex={$_.Directory.name}},FullName,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | 
+     Out-File -Width $OUTPUTWIDTH -FilePath C:\Users\1287921639E\.bash\hash-output\hash.test.txt
 
     
 
