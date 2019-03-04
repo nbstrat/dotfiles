@@ -1,0 +1,129 @@
+<# 
+.SYNOPSIS
+write a synopsis here
+
+.DESCRIPTION
+write a description here
+
+.PARAMETER PRO
+The host name for the production server.
+
+.PARAMETER COOP
+The host name for the coop server.
+
+.PARAMETER DEV
+The host name for the development server.
+
+.PARAMETER IDT
+The host name for the IDT server.
+
+.PARAMETER QA
+The host name for the QA server.
+
+.NOTES
+The parameter value will replace the server name section of the FQDN of the signalR and API endpoints.
+
+
+.EXAMPLE
+Open Power Shell
+cd to the script directory
+(I am running it from my .bash directory)
+cd $home/.bash 
+
+.\GetHash.ps1
+
+Output the specific help information from the header
+Get-Help .\GetHash.ps1 -full
+Get-Help .\GetHash.ps1 -parameter PRO
+#> 
+
+
+# TODO/DONE:
+# DONE: exclude conditions
+# TODO: add input parameter for Keesler versus Lackland
+
+
+
+# file date can be dropped if needed 
+# file size is not important
+# ideal output is
+# dirname
+#    FileName  HASH   
+# OR
+# filename hash short version of path
+
+# cd to directory location
+cd c:/_projects/custom_reports/TTMSReportsApp/TTMSReportsApp
+
+# simple ls pipe 
+ls |Get-FileHash -Algorithm SHA256
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse | ForEach-Object {Get-FileHash $_.FullName} 
+
+# This gets what I want - does not recursively get files in sub-directories
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse | 
+Select-Object Name,CreationTime,@{n='SHA256';ex={(Get-FileHash $_.fullname).hash}}
+
+# version 2 includes full path
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse |
+>> Select-Object FullName,CreationTime,@{n='SHA256';ex={(Get-FileHash $_.fullname).hash}} >> hash.test.txt
+
+
+# version 3 includes sort directive and specifically names the hashing algorithm
+ Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse | Sort-Object Directory, Name |
+ Select-Object FullName,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} >> hash.test.txt
+
+# version 4 includes directory name as seperate property
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse | Sort-Object Directory, Name |
+Select-Object Directory,Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} >> hash.test.txt
+
+
+# version 5 - substring the directory
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse | Sort-Object Directory, Name |
+Select-Object Name,CreationTime,@{n='RootDirectory';ex={$_.Directory.name.Substring(0,10)}} >> hash.test.txt
+
+# version 5 - substring the directory & hash readded
+# todo: when put in script form, add logic to properly substring the directory name
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse | Sort-Object Directory, Name |
+Select-Object @{n='RootDirectory';ex={$_.Directory.name.Substring(0,10)}},Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} >> hash.test.txt
+
+# version 6 - substring not needed - readded FullName to help isolate exlusions
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse | Sort-Object Directory, Name |
+>> Select-Object @{n='RootDirectory123456789';ex={$_.Directory.name}},FullName,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} >> hash.test
+
+# version 7 - with exclude condition, multiple excludes must not contain a space between conditions 
+ Get-ChildItem -Path "C:\_projects\custom_reports\_deliverables" -Recurse -Exclude *.ico,*.css | Sort-Object Directory, Name |
+ Select-Object @{n='RootDirectory123456789';ex={$_.Directory.name}},FullName,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} >> hash.tes
+
+# everything below is for reference
+
+
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse |
+| Select-Object Name, Directory
+
+# dir > filename.txt
+Get-ChildItem | where {$_.PsIsContainer}
+| Select-Object Name
+
+
+# https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/group-object?view=powershell-6
+
+# https://stackoverflow.com/questions/26281375/group-powershell-search-results-by-folder
+Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse -File | Sort-Object Length -Descending | Group-Object directory | Select -ExpandProperty group
+
+ Get-ChildItem -Path "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse -File | Sort-Object Name | Group-Object directory | Select -ExpandProperty group 
+ 
+ 
+
+
+# N:\scm\CM_Scripts\Release
+ # report server should exclude xml, tmp, txt, pdf
+
+
+ # output files
+# N:\Release\archives\16_xx_xx\16_08_00\Output_Files\Directory_Logs
+# https://www.petri.com/hashing-powershell-using-get-filehash
+
+
+ Get-ChildItem -Path"C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" -Recurse | ForEach-Object {Split-Path $_.FullName -Parent}
+
+ Get-ChildItem "C:\_projects\custom_reports\TTMSReportsApp\TTMSReportsApp" | Select-Object Name,CreationTime,@{n='MD5';ex={(Get-FileHash $_.fullname).hash}}

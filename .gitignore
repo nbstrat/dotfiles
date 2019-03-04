@@ -116,3 +116,6 @@ SQL Developer Export Files
 
 # VSCode IDE
 .vscode
+
+# temporary output directory
+**/hash-output/*

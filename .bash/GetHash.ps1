@@ -1,0 +1,67 @@
+<# 
+.SYNOPSIS
+write a synopsis here
+
+.DESCRIPTION
+write a description here
+
+.PARAMETER SITE
+The site location that script will be execute at. Expected values are KAFB or LAFB.
+
+
+.NOTES
+add any helpful notes here
+
+.EXAMPLE
+Open Power Shell
+cd to the script directory
+(I am running it from my .bash directory)
+cd $home/.bash 
+
+.\GetHash.ps1 KAFB
+.\GetHash.ps1 LAFB
+
+Output the specific help information from the header
+Get-Help .\GetHash.ps1 -full
+Get-Help .\GetHash.ps1 -parameter SITE
+
+#> 
+
+
+
+param (
+ [Parameter(Mandatory= $true)] 
+ [string] $SITE
+)
+
+
+if ($SITE -eq "KAFB") {
+    Write-Host "KAFB"
+
+   # TODO: Add each CI for Keesler deliverables
+   # Reports
+   # Note: Reports gets files from two locations; The { bracket will need to be escaped with tilde.
+   # TODO: Replace FullName with Name - FullName being used to assist in troubleshooting 
+   Write-Host "Reports Server Inetpub"
+   Get-ChildItem -Path c:\_projects\custom_reports\_deliverables,c:\_projects\custom_reports\`{tomcat_home`} -Recurse `
+    -Exclude *.ico,*.css | 
+     Sort-Object Directory, Name |
+     Select-Object @{n='RootDirectory123456789';ex={$_.Directory.name}},FullName,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | Out-File -Width 2147483647 -FilePath C:\Users\1287921639E\.bash\hash-output\hash.test.txt
+
+    
+
+
+  }
+
+elseif ($SITE -eq "LAFB") {
+    Write-Host "Input was LAFB"
+  }
+else  {
+  Write-Host "---------------------------------"  
+  Write-Host "Expected input parameter not provided. 
+  Execute  Get-Help .\GetHash.ps1 -full for additional information"
+  Write-Host "---------------------------------"
+}
+
+
+
