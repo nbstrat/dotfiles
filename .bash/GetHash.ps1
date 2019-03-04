@@ -42,12 +42,11 @@ if ($SITE -eq "KAFB") {
    # TODO: Add each CI for Keesler deliverables
    # Reports
    # Note: Reports gets files from two locations; The { bracket will need to be escaped with tilde.
-   # TODO: Replace FullName with Name - FullName being used to assist in troubleshooting 
    Write-Host "Reports Server Inetpub"
    Get-ChildItem -Path c:\_projects\custom_reports\_deliverables,c:\_projects\custom_reports\`{tomcat_home`} -Recurse `
     -Exclude *.ico,*.css | 
      Sort-Object Directory, Name |
-     Select-Object @{n='RootDirectory     ';ex={$_.Directory.name}},FullName,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | 
+     Select-Object @{n='RootDirectory     ';ex={$_.Directory.name}},Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | 
      Out-File -Width $OUTPUTWIDTH -FilePath C:\Users\1287921639E\.bash\hash-output\hash.test.txt
 
     
