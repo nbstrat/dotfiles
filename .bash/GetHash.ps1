@@ -36,6 +36,11 @@ param (
 # Set output width to max integer to prevent ellipsis output
 $OUTPUTWIDTH = 2147483647
 
+$LOGDIR = "C:\Users\1287921639E\.bash\hash-output\"
+$RELEASE = "xx_xx_xx"
+$OUTPUTPATH = $LOGDIR+$RELEASE
+$OUTPUTFILE = ""
+
 if ($SITE -eq "KAFB") {
     Write-Host "KAFB"
 
@@ -43,11 +48,12 @@ if ($SITE -eq "KAFB") {
    # Reports
    # Note: Reports gets files from two locations; The { bracket will need to be escaped with tilde.
    Write-Host "Reports Server Inetpub"
+   $OUTPUTFILE = $OUTPUTPATH + '_hash.test.txt'
    Get-ChildItem -Path c:\_projects\custom_reports\_deliverables,c:\_projects\custom_reports\`{tomcat_home`} -Recurse `
     -Exclude *.ico,*.css | 
      Sort-Object Directory, Name |
      Select-Object @{n='RootDirectory     ';ex={$_.Directory.name}},Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | 
-     Out-File -Width $OUTPUTWIDTH -FilePath C:\Users\1287921639E\.bash\hash-output\hash.test.txt
+     Out-File -Width $OUTPUTWIDTH -FilePath $OUTPUTFILE
 
     
 
