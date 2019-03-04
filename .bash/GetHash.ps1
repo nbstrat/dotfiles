@@ -48,14 +48,22 @@ if ($SITE -eq "KAFB") {
    # Reports
    # Note: Reports gets files from two locations; The { bracket will need to be escaped with tilde.
    Write-Host "Reports Server Inetpub"
-   $OUTPUTFILE = $OUTPUTPATH + '_hash.test.txt'
-   Get-ChildItem -Path c:\_projects\custom_reports\_deliverables,c:\_projects\custom_reports\`{tomcat_home`} -Recurse `
+   $OUTPUTFILE = $OUTPUTPATH + '_Report_Server_MAGH-MP-706v.log'
+   Get-ChildItem -Path c:\_projects\custom_reports\_deliverables\* -Recurse `
     -Exclude *.xml,*.tmp,*.txt,*.pdf | 
      Sort-Object Directory, Name |
      Select-Object @{n='RootDirectory     ';ex={$_.Directory.name}},Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | 
      Out-File -Width $OUTPUTWIDTH -FilePath $OUTPUTFILE
-
-    
+   $OUTPUTFILE = $OUTPUTPATH + '_Report_Server_MAGH-MP-706v_Config.log'
+   Get-ChildItem -Path c:\_projects\custom_reports\`{tomcat_home`}\conf\* -Recurse |
+     Sort-Object Directory, Name |
+     Select-Object @{n='RootDirectory     ';ex={$_.Directory.name}},Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | 
+     Out-File -Width $OUTPUTWIDTH -FilePath $OUTPUTFILE
+   $OUTPUTFILE = $OUTPUTPATH + '_Report_Server_MAGH-MP-706v_webapps.log'
+   Get-ChildItem -Path c:\_projects\custom_reports\`{tomcat_home`}\webapps\* -Recurse |
+     Sort-Object Directory, Name |
+     Select-Object @{n='RootDirectory     ';ex={$_.Directory.name}},Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} | 
+     Out-File -Width $OUTPUTWIDTH -FilePath $OUTPUTFILE 
 
 
   }
