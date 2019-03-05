@@ -66,6 +66,7 @@ if ($SITE -eq "KAFB") {
 # TODO: Add Interface server
 
    # Report Server
+   # TODO: Move script to 700 server and update Path to report server location
     Write-Host "Reports Server Inetpub"
    $OUTPUTFILE = $OUTPUTPATH + '_Report_Server_MAGH-MP-706v.log'
    Get-ChildItem -Path c:\_projects\custom_reports\_deliverables\* -Recurse `
@@ -99,6 +100,8 @@ if ($SITE -eq "KAFB") {
 
 elseif ($SITE -eq "LAFB") {
     Write-Host "Input was LAFB"
+
+    #TODO: Add all lackland related CI items.
   }
 else  {
   Write-Host "---------------------------------"  
