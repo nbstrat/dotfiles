@@ -44,10 +44,19 @@ $OUTPUTFILE = ""
 if ($SITE -eq "KAFB") {
     Write-Host "KAFB"
 
-   # TODO: Add each CI for Keesler deliverables
-   # Reports
-   # Note: Reports gets files from two locations; The { bracket will need to be escaped with tilde.
-   Write-Host "Reports Server Inetpub"
+   # TODO: Add AT Database
+
+   # TODO: Add AT Authoring App Server
+
+   # TODO: Add AT Delivery App Server
+
+   # TODO: Add ICIS Database
+   # TODO: Add ICIS Web server
+   # TODO: Add ICIS Sharepoint Server
+   
+
+   # Report Server
+    Write-Host "Reports Server Inetpub"
    $OUTPUTFILE = $OUTPUTPATH + '_Report_Server_MAGH-MP-706v.log'
    Get-ChildItem -Path c:\_projects\custom_reports\_deliverables\* -Recurse `
     -Exclude *.xml,*.tmp,*.txt,*.pdf | 
