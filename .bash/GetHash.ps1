@@ -44,6 +44,7 @@ $OUTPUTFILE = ""
 if ($SITE -eq "KAFB") {
     Write-Host "KAFB"
 
+   #N:\scm\CM_Scripts\Release\Directory_Listings_MASTER.bat
    # TODO: Add AT Database
 
    # TODO: Add AT Authoring App Server
@@ -54,6 +55,15 @@ if ($SITE -eq "KAFB") {
    # TODO: Add ICIS Web server
    # TODO: Add ICIS Sharepoint Server
    
+   # TODO: Add EVAL Database Server
+   # TODO: Add EVAL Web Server
+   # TODO: Add EVAL Perception5
+   # TODO: Add EVAL Perception5 templates and resources
+
+   # TODO: Add SM Database
+   # TODO: Add LM and BMT ICIS Web server
+
+# TODO: Add Interface server
 
    # Report Server
     Write-Host "Reports Server Inetpub"
@@ -75,6 +85,16 @@ if ($SITE -eq "KAFB") {
      Out-File -Width $OUTPUTWIDTH -FilePath $OUTPUTFILE 
 
 
+# TODO: Add Cognos Datamart Server
+# TODO: Add Cognos BI Server
+
+ # TODO: Add MTL Database Server
+   # TODO: Add MTL Web Server
+
+# TODO: Add SSO Database Server
+   # TODO: Add Portal SSO Web Server
+
+# TODO: Add WebHelp Server
   }
 
 elseif ($SITE -eq "LAFB") {
