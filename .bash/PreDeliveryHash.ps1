@@ -4,7 +4,7 @@ Author: Shane Walters March 2019
 
 .DESCRIPTION
 Creates an output file containing the filename, creation date, and SHA256 hash of the files found in the 
-specified reelase folder. 
+specified release folder. 
 
 The HASH comparison of files prior to delivery to files actually delivered satisfies the following STIG vulnerability.
 Vul ID: V-70369
@@ -18,7 +18,7 @@ The value coincides with the folder name for the particular release and is used 
 The value is also used as part of the output log file. 
 
 .NOTES
-add any helpful notes here
+This script is executed prior to delivery.
 
 .EXAMPLE
 From a Remote Desktop Connection on the server
