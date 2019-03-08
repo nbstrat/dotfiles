@@ -124,37 +124,19 @@ else  {
   Write-Host "---------------------------------"
 }
 
-$resultsArray = @()
-
-
-# Get-ChildItem -Path '\\MAHG-MP-792v\d$\User\Package\*' -Include *.exe -File |
-#      Sort-Object Name |
-#      Select-Object Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} |
-#      Format-Table -AutoSize -Wrap
-     
-
-    #  Set-Content $OUTPUTFILE 'FRED WAS HERE'
+# array for holding the results from each server queried
+$hashResults = @()
 
 foreach ($server in $serverList) {
+    # establish the server path 
     $SRVPATH = '\\'+ $server + '\' + $DIR
-  # Write-Host $SRVPATH
-  # Add-Content $OUTPUTFILE $SRVPATH
+    Write-Host $SRVPATH
    
    
-   $resultsArray += Get-ChildItem -Path $SRVPATH -Include *.exe -File |
+   $hashResults += Get-ChildItem -Path $SRVPATH -Include *.exe -File |
      Sort-Object Name |
      Select-Object Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} 
-     
- 
-# Add-Content $OUTPUTFILE $resultsArray
 }
 
-# Add-Content $OUTPUTFILE $resultsArray
-
-#  foreach ($x in $resultsArray) {
-#      Write-Host $x.Name
-#      Write-Host $x.CreationTime
-#      Write-host $x.SHA256
-#  }
-
- $resultsArray | ForEach {[PSCustomObject]$_} | Format-Table -AutoSize | Out-File -FilePath $OUTPUTFILE 
+# output the results
+ $hashResults | ForEach {[PSCustomObject]$_} | Format-Table -AutoSize | Out-File -FilePath $OUTPUTFILE 
