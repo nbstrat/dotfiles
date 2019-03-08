@@ -16,6 +16,12 @@ The release number for the particular release in the format xx_xx_xx.
 The value coincides with the folder name for the particular release and is used as part of the path when executing this script. 
 The value is also used as part of the output log file. 
 
+.PARAMETER SITE
+Parameter sets the list of servers the script will be execute agains. 
+Expected values are KAFB or LAFB.
+TODO: The value is also used as part of the output log file. 
+
+
 .NOTES
 This script is executed after delivery.
 
@@ -25,8 +31,9 @@ Open Power Shell
 cd to the directory containing this script
 cd E:\DELIVERY\scm\CM_Scripts\Release 
 
-.\PostDeliveryHash.ps1 <RELEASE>
-.\PostDeliveryHash.ps1 16_08_00
+.\PostDeliveryHash.ps1 <RELEASE> <SITE>
+.\PostDeliveryHash.ps1 16_08_00 KAFB
+.\PostDeliveryHash.ps1 16_08_00 LAFB
 
 Output the specific help information from the header
 Get-Help .\PostDeliveryHash.ps1 -full
@@ -37,20 +44,22 @@ Get-Help .\PostDeliveryHash.ps1 -parameter RELEASE
 
 param (
  [Parameter(Mandatory= $true)] 
- [string] $RELEASE
+ [string] $RELEASE,
+ [Parameter(Mandatory= $true)] 
+ [string] $SITE
 )
 
 
 #TODO: Remove archives\16_xx_xx from PATHDIR 
 $PATHDIR = "E:\DELIVERY\Release\archives\16_xx_xx\"
 $PKGDIR = $PATHDIR + $RELEASE + '\Package\'
-$OUTPUTFILE = $PKGDIR + $RELEASE + '_PostDeliveryHash.log'
+$OUTPUTFILE = $PKGDIR + $SITE + '_' + $RELEASE + '_PostDeliveryHash.log'
 
 # path to directory that deliverables are copied to during a release
 $DIR = 'd$\User\Package\*'
 $SRVPATH = ''
 
-# Array of servers - last entry for each array must not include a trailing comma
+# Array of Keesler servers - last entry of array must not include a trailing comma
 $serverListKeesler = 'MAHG-MP-707v',   #AT Database
                       'MAHG-MP-800v',   #AT Authoring App Server
                       'mahg-mp-801v',   #AT Delivery App Server
@@ -71,9 +80,49 @@ $serverListKeesler = 'MAHG-MP-707v',   #AT Database
                        'mahg-mp-702v',   #Datamart Server
                        'mahg-mp-703v'   #Cognos BI 10 Server
 
+# Array of Lackland servers - last entry of array must not include a trailing comma
+$serverListLackland = '52MPLS-MP-729',   #ICIS/Evaluation Database COOP
+                      'MPLS-MP-703v',   #SM-BMT/eBMT/MTL Shared Database Server
+                      'MPLS-MP-724v',   #Student Management/MTL Database COOP
+                       '52MPLS-MP-729',   #Automated Testing Database
+                       '52mahg-mp-722',   #AT Authoring App Server
+                       '52MPLS-MP-701',   #AT Delivery App Server
+                       'MPLS-MP-715v',   #Evaluation Web Server
+                       '52MPLS-MP-727',   #ICIS Web App Server COOP
+                       'MPLS-MP-716v',   #ICIS Sharepoint Server COOP
+                       'MPLS-MP-717v',   #ICIS Sharepoint Server COOP
+                       'MPLS-MP-718v',   #ICIS Sharepoint Server COOP
+                       'MPLS-MP-719v',   #ICIS Sharepoint Server COOP
+                       'MPLS-MP-731v',    #Interface Server
+                       '52MPLS-MP-705',    #Job Match Database Server
+                       '52MPLS-MP-707',    #Job Match App Server
+                       'MPLS-MP-728v',    #Report Server
+                       'MPLS-MP-720v',    #eBMT Web App Server
+                       'MPLS-MP-723v',    #LMS App Server
+                       'MPLS-MP-702v',    #SM BMT App Server
+                       '52MPLS-MP-710',   #MTL App Server
+                       'MPLS-MP-729v',    #SSO Database Server COOP
+                       '52MPLS-MP-709',   #SSO App Server / WebHelp Server COOP
+                       'MPLS-MP-704v',   #BMT and eBMT ColdFusion Web Server
+                       'MPLS-MP-712v',   #Datamart Server
+                       'MPLS-MP-713v'   #Cognos BI 10 Server
 
-#TODO: Add logic for LAFB / KAFB
-$serverList = $serverListKeesler
+
+
+if ($SITE -eq "KAFB") {
+   Write-Host "Executing against Keesler servers."
+   $serverList = $serverListKeesler
+}
+elseif ($SITE -eq "LAFB") {
+    Write-Host "Executing against Lackland servers." 
+    $serverList = $serverListLackland
+  }
+else  {
+  Write-Host "---------------------------------"  
+  Write-Host "Expected SITE input parameter not provided. 
+  Execute  Get-Help .\PostDeliveryHash.ps1 -full for additional information"
+  Write-Host "---------------------------------"
+}
 
 $resultsArray = @()
 
