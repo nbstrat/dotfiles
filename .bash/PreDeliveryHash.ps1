@@ -23,7 +23,7 @@ add any helpful notes here
 .EXAMPLE
 From a Remote Desktop Connection on the server
 Open Power Shell
-cd to the script directory
+cd to the directory containing this script
 cd E:\DELIVERY\scm\CM_Scripts\Release 
 
 .\PreDeliveryHash.ps1 <RELEASE>
@@ -41,19 +41,13 @@ param (
  [string] $RELEASE
 )
 
-# TODO: Move script to 700 server and update Path to report server location
-#TODO Chagne to drive path when testing on 700 server
-#$LOGDIR = "E:\DELIVERY\Release\hash-test\Output_Files\Directory_Logs\"
-$LOGDIR = "\\52mahg-mp-700\e$\DELIVERY\Release\hash-test\Output_Files\Directory_Logs\"
-
 
 #TODO: Remove archive\16_xx_xx from PATHDIR 
-$PATHDIR = "\\52mahg-mp-700\e$\DELIVERY\Release\archives\16_xx_xx\"
+$PATHDIR = "E:\DELIVERY\Release\archives\16_xx_xx\"
 $PKGDIR = $PATHDIR + $RELEASE + '\Package\'
 $DIR = $PKGDIR + '*'
 
-$OUTPUTPATH = $LOGDIR
-$OUTPUTFILE = $PATHDIR + $RELEASE + '\Package\' + $RELEASE + '_PreDeliveryHash.log'
+$OUTPUTFILE = $PKGDIR + $RELEASE + '_PreDeliveryHash.log'
 
    Write-Host "Calculating Hash of Deliverables for " $PKGDIR
    Get-ChildItem -Path $DIR -Include *.exe -File |
