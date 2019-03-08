@@ -19,7 +19,7 @@ The value is also used as part of the output log file.
 .PARAMETER SITE
 Parameter sets the list of servers the script will be execute agains. 
 Expected values are KAFB or LAFB.
-TODO: The value is also used as part of the output log file. 
+The value is also used as part of the output log file. 
 
 
 .NOTES
