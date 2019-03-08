@@ -95,7 +95,7 @@ $serverListLackland = '52MPLS-MP-729',   #ICIS/Evaluation Database COOP
                        'MPLS-MP-719v',   #ICIS Sharepoint Server COOP
                        'MPLS-MP-731v',    #Interface Server
                        '52MPLS-MP-705',    #Job Match Database Server
-                       '52MPLS-MP-707',    #Job Match App Server
+                       'MPLS-MP-707v',    #Job Match App Server
                        'MPLS-MP-728v',    #Report Server
                        'MPLS-MP-720v',    #eBMT Web App Server
                        'MPLS-MP-723v',    #LMS App Server
