@@ -138,8 +138,20 @@ foreach ($server in $serverList) {
    # CM request to use LastWriteTime instead of CreationTime.
    $hashResults += Get-ChildItem -Path $SRVPATH -Include *.exe -File |
      Sort-Object Name |
-     Select-Object Name,LastWriteTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}},@{n='Host-Server';ex={($server)}} 
+     Select-Object Name,LastWriteTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}},@{n='HostServer';ex={($server)}} 
 }
 
+# TODO the additional column hostserver is not being included in the output - overall width is too large.
+# to add this formatting, change the format option below to Format-Table $tableFormat
+# using the Wrap parameter will output all the data but with wrapping
+$tableFormat = @{Expression={$_.Name}; Label="Name"; Width=28},
+                @{Expression={$_.LastWriteTime}; Label="LastWriteTime"; Width=24},
+                @{Expression={$_.SHA256}; Label="SHA256"; Width=67},
+                @{Expression={$_.HostServer}; Label="HostServer"; Width=20}
+
 # output the results sorting my file name.
- $hashResults | ForEach {[PSCustomObject]$_} | Sort-Object -Property Name | Format-Table -AutoSize | Out-File -FilePath $OUTPUTFILE 
+# TODO Per the docs, Format-Table does not return any object and should be used last when piping outputs.
+ $hashResults | ForEach {[PSCustomObject]$_} |
+    Sort-Object -Property Name |
+    Format-Table -Wrap |
+    Out-File -FilePath $OUTPUTFILE 
