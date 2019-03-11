@@ -53,8 +53,7 @@ param (
 #TODO: Remove archives\16_xx_xx from PATHDIR 
 $PATHDIR = "E:\DELIVERY\Release\archives\16_xx_xx\"
 $PKGDIR = $PATHDIR + $RELEASE + '\Package\'
-# TODO modify output file name to reflect <RELEASE>_<SITE> 
-# $OUTPUTFILE = $PKGDIR + $SITE + '_' + $RELEASE + '_PostDeliveryHash.log'
+# Output file should use <RELEASE>_<SITE>_xxx format. 
 $OUTPUTFILE = $PKGDIR + $RELEASE + '_' + $SITE + '_PostDeliveryHash.log'
 
 # path to directory that deliverables are copied to during a release
@@ -136,14 +135,11 @@ foreach ($server in $serverList) {
    
    #TODO - CM has request that the host server be include in the output to facilitate comparing hashes where a deliverable
    # is delivered to multiple locations such as Production and COOP servers.'
-   # TODO: Change CreationTime to LastWriteTime
+   # CM request to use LastWriteTime instead of CreationTime.
    $hashResults += Get-ChildItem -Path $SRVPATH -Include *.exe -File |
      Sort-Object Name |
-     Select-Object Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} 
+     Select-Object Name,LastWriteTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} 
 }
 
-#TODO Output is based on array order - sort by file name.
-# | Sort-Object -Property lastwritetime 
-# NOGO  $hashResults | Sort-Object -Property Name
-# output the results
+# output the results sorting my file name.
  $hashResults | ForEach {[PSCustomObject]$_} | Sort-Object -Property Name | Format-Table -AutoSize | Out-File -FilePath $OUTPUTFILE 
