@@ -133,12 +133,12 @@ foreach ($server in $serverList) {
     $SRVPATH = '\\'+ $server + '\' + $DIR
     Write-Host $SRVPATH
    
-   #TODO - CM has request that the host server be include in the output to facilitate comparing hashes where a deliverable
+   # CM request to add host server to output to facilitate comparing hashes where a deliverable
    # is delivered to multiple locations such as Production and COOP servers.'
    # CM request to use LastWriteTime instead of CreationTime.
    $hashResults += Get-ChildItem -Path $SRVPATH -Include *.exe -File |
      Sort-Object Name |
-     Select-Object Name,LastWriteTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} 
+     Select-Object Name,LastWriteTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}},@{n='Host-Server';ex={($server)}} 
 }
 
 # output the results sorting my file name.
