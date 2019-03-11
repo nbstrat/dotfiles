@@ -4,7 +4,7 @@ Author: Shane Walters March 2019
 
 .DESCRIPTION
 Creates an output file containing the filename, creation date, and SHA256 hash of the files found in the 
-specified release folder. 
+specified reelase folder. 
 
 The HASH comparison of files prior to delivery to files actually delivered satisfies the following STIG vulnerability.
 Vul ID: V-70369
@@ -18,7 +18,7 @@ The value coincides with the folder name for the particular release and is used 
 The value is also used as part of the output log file. 
 
 .NOTES
-This script is executed prior to delivery.
+add any helpful notes here
 
 .EXAMPLE
 From a Remote Desktop Connection on the server
@@ -49,10 +49,10 @@ $DIR = $PKGDIR + '*'
 
 $OUTPUTFILE = $PKGDIR + $RELEASE + '_PreDeliveryHash.log'
 
-   Write-Host "Calculating Hash of Deliverables for " $PKGDIR
+   Write-Host "Calculating Hash of Pre-Deliverables for " $PKGDIR
    Get-ChildItem -Path $DIR -Include *.exe -File |
      Sort-Object Name |
-     Select-Object Name,CreationTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} |
+     Select-Object Name,LastWriteTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}} |
      Format-Table -AutoSize -Wrap |  
      Out-File -FilePath $OUTPUTFILE
  
