@@ -142,7 +142,7 @@ foreach ($server in $serverList) {
      Select-Object Name,LastWriteTime,@{n='SHA256';ex={(Get-FileHash -Algorithm SHA256 $_.fullname).hash}},@{n='HostServer';ex={($server)}} 
 }
 
-# output the results sorting my file name.
+# output the results sorting by file name.
   $hashResults | ForEach {[PSCustomObject]$_} |
      Sort-Object -Property Name |
      Format-Table -AutoSize |
