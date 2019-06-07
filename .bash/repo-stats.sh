@@ -11,8 +11,8 @@
 #  Purpose:
 #  Provides the following status for each repository defined in the repo array:
 #	1) Number of commits for all branches by Author
-#   2) List of branches that have not been merged into the master branches
-#   3) ??
+#   2) List of branches that HAVE NOT been merged into the master branches
+#   3) List of branches that HAVE been merged into the master branches
 #  
 #
 # Use:
@@ -30,7 +30,7 @@
 # Define the path to the local repository directory.
 LOCAL_PATH=//MAHG-MP-783v/source/
 
-# Create an array of the git repositories that will be backed up to the remote location.
+# Create an array of the git repositories.
 repo_list=( 'AIMS.git'
              'AppDataRoaming-npm.git'
              'apiauth.git'
@@ -114,8 +114,12 @@ for i in ${repo_list[@]}
      git shortlog -s -n --all --no-merges
 	 printf "\n"
 
-	 echo " Branches that have not been merged into master"
+	 echo " Branches that HAVE NOT been merged into master"
 	 git branch --no-merged master -a
+	 printf "\n"
+
+   echo " Branches that HAVE been merged into master"
+	 git branch --merged master -a
 	 printf "\n"
  done
 
