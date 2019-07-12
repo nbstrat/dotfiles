@@ -24,7 +24,7 @@ alias commitpvcs='cd $HOME/.bash/ && ./ttms-pvcs-commit.sh'
 alias commitsoftware='cd $HOME/.bash/ && ./ttms-software-license-commit.sh'
 
 # BFG 
-alias bfg='java -jar /c/Users/1287921639E/bfg-1.12.16.jar'
+alias bfg='java -jar /c/Users/shane/bfg-1.12.16.jar'
 
 # repo backup 
 alias runbackups='cd $HOME/.bash/ && ./backup-remote-repos.sh'
