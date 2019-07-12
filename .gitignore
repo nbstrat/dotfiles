@@ -45,8 +45,9 @@ tslint.json
 NTUSER.DATE*
 ntuser*
 
-# gov bs ?
+# gov bs
 vESD/
+mcafee dlp quarantined files/
 
 # my custom directories
 AndroidStudioProjects/
@@ -115,3 +116,6 @@ SQL Developer Export Files
 
 # VSCode IDE
 .vscode
+
+# temporary output directory
+**/hash-output/*
