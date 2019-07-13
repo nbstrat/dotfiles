@@ -45,13 +45,13 @@ Locate the access tag and modify the sslFlags attribute to "SslNegotiateCert"
 >  &nbsp;&nbsp;&nbsp;&nbsp;&lt;access sslFlags="SslNegotiateCert"/&gt;  
 >  &nbsp;&nbsp;&lt;/security&gt;  
 >  &lt;/system.webServer&gt;
-  
+
 NOTE: Using the `SslRequireCert` attribute did not provide the CAC prompt
 on the USAF environment. 
 
 
 If properly configured, you will be prompted for CAC when making request to port 44300.
- 
+
 * With CAC prompt  
 * `https://localhost:44300/`  
 * Without CAC prompt   
@@ -68,3 +68,7 @@ If properly configured, you will be prompted for CAC when making request to port
 
 #### product-preferences.xml
 %USERPROFILE%\AppData\Roaming\SQL Developer\systemx.x.xx.xx\o.sqldeveloper.xx.x.x.xx.xx\product-preferences.xml
+
+
+
+[Resolving missing LFS references](github-error-GH008.md)
