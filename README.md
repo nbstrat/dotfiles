@@ -71,4 +71,4 @@ If properly configured, you will be prompted for CAC when making request to port
 
 
 
-[Resolving missing LFS references](github-error-GH008.md)
+[Resolving missing LFS references](master/github-error-GH008.md)
