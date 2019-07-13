@@ -71,5 +71,5 @@ If properly configured, you will be prompted for CAC when making request to port
 
 
 
-[Resolving missing LFS references - absolute](https://github.com/nbstrat/dotfiles/blob/master/github-error-GH008.md)
-[Resolving missing LFS references - relative](github-error-GH008.md)
+[Resolving missing LFS references - absolute](https://github.com/nbstrat/dotfiles/blob/master/github-error-GH0008.md)
+[Resolving missing LFS references - relative](github-error-GH0008.md)
