@@ -51,7 +51,7 @@ alias npmroaming='cd /c/Users/1287921639E/AppData/Roaming/npm'alias mtldb='cd /c
 alias npmdev='cd /c/_projects/AppData/Roaming/npm'
 alias npmroaming='cd /c/Users/1287921639E/AppData/Roaming/npm'
 alias release='cd /c/_projects/release-repo'
-alias ttmsdocs='cd /j/TTMS_Documentation'
+alias ttmsdocs='cd /c/_projects/ttmsdocs'
 
 # home pc aliases
 alias briefcase='cd /c/_projects/briefcase/' 
