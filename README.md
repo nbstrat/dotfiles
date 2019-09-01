@@ -3,9 +3,28 @@
 [https://nbstrat.github.io/dotfiles/](https://nbstrat.github.io/dotfiles/)
 
 
-Quick and dirty dotfiles for configuring a Windows based workstation for the development efforts that I typically am involved in.
+Rework version to automate setting up a new machine.  
 
-Please note that some of these configurations are 'work-arounds' based on DoD security implementations and are usually not the best approach if you are not required to do so.
+
+### Installation
+Warning: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+
+Using Git and the bootstrap script
+You can clone the repository wherever you want. (I like to keep it in ~/_projects/dotfiles) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+
+git clone https://github.com/nbstrat/dotfiles.git && cd dotfiles && source bootstrap.sh
+To update, cd into your local dotfiles repository and then:
+
+source bootstrap.sh
+Alternatively, to update while avoiding the confirmation prompt:
+
+set -- -f; source bootstrap.sh
+
+
+
+
+
+#### OLD STUFF BELOW
 
 ### TODO
 
