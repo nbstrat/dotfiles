@@ -30,6 +30,7 @@ alias bfg='java -jar /c/Users/shane/bfg-1.12.16.jar'
 alias runbackups='cd $HOME/.bash/ && ./backup-remote-repos.sh'
 
 # cd location aliases
+alias dotfiles='cd /c/_projects/dotfiles'
 alias emitters='cd /c/_projects/emitters'
 alias mydocs='cd $HOME/Documents'
 alias ttmsdocs='cd /c/_projects/ttmsdocs'
@@ -37,6 +38,8 @@ alias ttmsdocs='cd /c/_projects/ttmsdocs'
 # home pc aliases
 alias briefcase='cd /c/_projects/briefcase/' 
 
+# macbook aliases
+alias wildcat='cd /c/_projects/wildcat'
 
 # open specific files in vim
 alias gridcheats='vim $HOME/Documents/CheatSheets_Reference/datagrid-cheats.txt'

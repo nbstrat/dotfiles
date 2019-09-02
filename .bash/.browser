@@ -1,6 +1,6 @@
 # aliases to various browser functions
 function so() {
-  iexplore "https://www.google.com/?q=site:stackoverflow.com%20$*"
+  chrome "https://www.google.com/?q=site:stackoverflow.com%20$*"
 }
 
 function google() {
