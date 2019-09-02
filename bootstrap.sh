@@ -17,7 +17,7 @@ function doIt() {
         cp -r .bash ~/
         cp .bash_profile ~/
 
-        # TODO .gitconfig
+        # TODO .gitconfig and .user.config
 
         #
 
