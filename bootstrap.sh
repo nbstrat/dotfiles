@@ -11,9 +11,11 @@ cd "$(dirname "${BASH_SOURCE}")";
 function doIt() {
     if [ ! -f ~/.bash ]; then
         # copy the .bash directory and .bash_profile
-        cp -r .bash ~/.bash
+        cp -r .bash ~/
         cp .bash_profile ~/
     fi
+    # apply bash_profile changes to existing open shell
+    source ~/.bash_profile;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
