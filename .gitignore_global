@@ -4,8 +4,9 @@
 # MacOS Specific
 .DS_Store
 
-# Windows Specific
+# Thumbnail cache files
 Thumbs.db
+._*
 
 # Non-OS Specific
 *.zip
