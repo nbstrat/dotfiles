@@ -10,9 +10,18 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 function doIt() {
     if [ ! -f ~/.bash ]; then
+        # delete the contents of the existing .bash directory if it exists
+        rm -r ~/.bash
+        
         # copy the .bash directory and .bash_profile
         cp -r .bash ~/
         cp .bash_profile ~/
+
+        # TODO copy the .gitignore files
+
+
+        # copy the BFG jar file
+        cp bfg-1.12.16.jar ~/
     fi
     # apply bash_profile changes to existing open shell
     source ~/.bash_profile;
