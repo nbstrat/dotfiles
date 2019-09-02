@@ -5,20 +5,27 @@
 cd "$(dirname "${BASH_SOURCE}")";
 
 # Temporary disable pulling any changes from origin 
-# git pull origin master;
+# TODO git pull origin master;
 
 
 function doIt() {
     if [ ! -f ~/.bash ]; then
-        # delete the contents of the existing .bash directory if it exists
+        # Delete the contents of the existing .bash directory if it exists.
         rm -r ~/.bash
         
-        # copy the .bash directory and .bash_profile
+        # Copy the .bash directory and .bash_profile.
         cp -r .bash ~/
         cp .bash_profile ~/
 
-        # TODO copy the .gitignore files
+        # TODO .gitconfig
 
+        #
+
+        # Copy the .gitignore_global file; 
+        # .gitignore will not be needed in the HOME directory since contents are being copied via bootstrap.
+        # .gitattributes will not be needed in the HOME directory for same reason.
+        # This revamp is too eliminate keeping a .git directory in the HOME directory.
+        cp .gitignore_global ~/
 
         # copy the BFG jar file
         cp bfg-1.12.16.jar ~/
