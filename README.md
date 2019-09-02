@@ -24,6 +24,7 @@ set -- -f; source bootstrap.sh
 #### Manually Installed Software 
 * Java - Needed for BFG file cleaner.
 * VS Code
+* Beyond Compare
 
 
 
