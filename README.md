@@ -25,7 +25,7 @@ set -- -f; source bootstrap.sh
 * Java - Needed for BFG file cleaner.
 * VS Code
 * Beyond Compare
-
+* gVim
 
 
 #### OLD STUFF BELOW
