@@ -25,7 +25,8 @@ set -- -f; source bootstrap.sh
 * Java - Needed for BFG file cleaner.
 * VS Code
 * Beyond Compare
-* gVim
+* gVim - https://www.vim.org/download.php
+* Virtual CloneDrive (for mounting iso images within a VM instance)
 
 
 #### OLD STUFF BELOW
