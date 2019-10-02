@@ -16,6 +16,7 @@ alias glog30='git log --decorate --color --graph --author="Shane Walters" --sinc
 alias dlog='git log --decorate --name-only --diff-filter=D --format="%C(auto)%h%x09%ai%x08%x08%x08%x08%x08%x08%x09%an%x09%d%s"'
 #alias go='git checkout'
 alias vim='gvim'
+alias rbi='git rebase -i'
 
 # ttmsdocs, pvcs, and software license auto-commits
 alias commitdocs='cd $HOME/.bash/ && ./ttms-documents-commit.sh'
