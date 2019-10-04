@@ -36,7 +36,7 @@ set -- -f; source bootstrap.sh
 * Add my Oracle SQL Developer configuration and report files
 * Add my Client-Side SSL Visual Studio configuration/setup notes
 * Add my git hooks
-
+* Implement git hooks template and deploy the hook scripts with bootstrap.sh
 
 
 
