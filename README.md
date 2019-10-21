@@ -26,6 +26,7 @@ set -- -f; source bootstrap.sh
 * VS Code
 * Beyond Compare
 * gVim - https://www.vim.org/download.php
+* SoapUI - https://smartbear.com/ (REST and SOAP API tool)
 * Virtual CloneDrive (for mounting iso images within a VM instance)
 
 
