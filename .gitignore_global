@@ -11,3 +11,6 @@ Thumbs.db
 # Non-OS Specific
 *.zip
 *.swp
+
+# Tilde files (temporary swap files)
+*.*~
