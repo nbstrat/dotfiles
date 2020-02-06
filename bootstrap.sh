@@ -17,14 +17,24 @@ function doIt() {
         cp -r .bash ~/
         cp .bash_profile ~/
 
-        # TODO .gitconfig and .user.config
+        # Copy the .config directory
+        cp -r .config ~/
 
-        #
+        # Copy the .gitconfig and .gitconfig-work files:
+        cp .gitconfig ~/
+        cp .gitconfig-work ~/
+        
+        # Copy the .kdiff3rc and .vimrc files:
+        cp .kdiff3rc ~/
+        cp .vimrc ~/
 
-        # Copy the .gitignore_global file; 
+       
+         
         # .gitignore will not be needed in the HOME directory since contents are being copied via bootstrap.
         # .gitattributes will not be needed in the HOME directory for same reason.
         # This revamp is too eliminate keeping a .git directory in the HOME directory.
+        
+        # Copy the .gitignore_global file;        
         cp .gitignore_global ~/
 
         # copy the BFG jar file
