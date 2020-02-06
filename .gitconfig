@@ -12,7 +12,7 @@
 	longpaths = true
 	packedGitLimit = 128m
 	packedGitWindowSize = 128m
-	excludesfile = C:/Users/1287921639E/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	trustExitCode = true
 [merge]
 	tool = kdiff3
