@@ -31,7 +31,7 @@ set -- -f; source bootstrap.sh
 
 
 
-## Thanks to…
+## Thanks To...
 
 * [Jim Nanney](https://github.com/jimnanney) for first introducing me to dotfiles.
 * [Mathias Bynens](https://github.com/mathiasbynens) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
@@ -39,9 +39,11 @@ set -- -f; source bootstrap.sh
 * [Jay Harris](https://github.com/jayharris) and his Powershell variation [dotfiles repository](https://github.com/jayharris/dotfiles-windows)
 
 
+## Other
 
 
-#### Manually Installed Software 
+
+#### My manually installed software 
 * Java - Needed for BFG file cleaner.
 * VS Code
 * [Beyond Compare](https://www.scootersoftware.com/) One the best and easiest to use comparison viewers.  
@@ -51,10 +53,9 @@ set -- -f; source bootstrap.sh
 
 
 
-### TODO
+#### TODO
 
 * Add my Oracle SQL Developer configuration and report files
-* Add my Client-Side SSL Visual Studio configuration/setup notes
 * Add my git hooks
 * Implement git hooks template and deploy the hook scripts with bootstrap.sh
 
@@ -114,5 +115,6 @@ If properly configured, you will be prompted for CAC when making request to port
 #### product-preferences.xml
 %USERPROFILE%\AppData\Roaming\SQL Developer\systemx.x.xx.xx\o.sqldeveloper.xx.x.x.xx.xx\product-preferences.xml
 
-## BFG Repo Cleaner
+
+### BFG Repo Cleaner
 [Resolving LFS references](github-error-GH0008.md) with [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 
