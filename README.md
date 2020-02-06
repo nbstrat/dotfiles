@@ -14,15 +14,29 @@ Warning: If you want to give these dotfiles a try, you should first fork this re
 Using Git and the bootstrap script
 You can clone the repository wherever you want. (I like to keep it in ~/_projects/dotfiles) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
-```git clone https://github.com/nbstrat/dotfiles.git && cd dotfiles && source bootstrap.sh```
+```bash
+git clone https://github.com/nbstrat/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
 To update, cd into your local dotfiles repository and then:
 
-```source bootstrap.sh```
+```bash
+source bootstrap.sh
+```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
-```set -- -f; source bootstrap.sh```
+```bash
+set -- -f; source bootstrap.sh
+```
 
+
+
+## Thanks to…
+
+* [Jim Nanney] (https://github.com/jimnanney) for first introducing me to dotfiles.
+* [Mathias Bynens](https://github.com/mathiasbynens) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
+* [Zach Holman](https://github.com/holman) and his [dotfiles repository](https://github.com/holman/dotfiles)
+* [Jay Harris](https://github.com/jayharris) and his [dotfiles repository](https://github.com/jayharris/dotfiles-windows)
 
 
 
