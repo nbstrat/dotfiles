@@ -33,10 +33,10 @@ set -- -f; source bootstrap.sh
 
 ## Thanks to…
 
-* [Jim Nanney] (https://github.com/jimnanney) for first introducing me to dotfiles.
+* [Jim Nanney](https://github.com/jimnanney) for first introducing me to dotfiles.
 * [Mathias Bynens](https://github.com/mathiasbynens) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
 * [Zach Holman](https://github.com/holman) and his [dotfiles repository](https://github.com/holman/dotfiles)
-* [Jay Harris](https://github.com/jayharris) and his [dotfiles repository](https://github.com/jayharris/dotfiles-windows)
+* [Jay Harris](https://github.com/jayharris) and his Powershell variation [dotfiles repository](https://github.com/jayharris/dotfiles-windows)
 
 
 
@@ -50,7 +50,6 @@ set -- -f; source bootstrap.sh
 * Virtual CloneDrive (for mounting iso images within a VM instance)
 
 
-#### OLD STUFF BELOW
 
 ### TODO
 
@@ -60,8 +59,9 @@ set -- -f; source bootstrap.sh
 * Implement git hooks template and deploy the hook scripts with bootstrap.sh
 
 
+## Reference:
 
-## Visual Studio Client-Side (CAC) Authentication during Development
+### Visual Studio Client-Side (CAC) Authentication during Development
 
 ### Enable SSL for the project if not already enabled.
   * Highlight the API project from Solution Explorer and press F4.
@@ -114,5 +114,5 @@ If properly configured, you will be prompted for CAC when making request to port
 #### product-preferences.xml
 %USERPROFILE%\AppData\Roaming\SQL Developer\systemx.x.xx.xx\o.sqldeveloper.xx.x.x.xx.xx\product-preferences.xml
 
-
-[Resolving missing LFS references with BFG](github-error-GH0008.md)
+## BFG Repo Cleaner
+[Resolving LFS references](github-error-GH0008.md) with [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 
