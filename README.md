@@ -31,7 +31,8 @@ set -- -f; source bootstrap.sh
 
 
 
-## Thanks To...
+## Thanks To
+...
 
 * [Jim Nanney](https://github.com/jimnanney) for first introducing me to dotfiles.
 * [Mathias Bynens](https://github.com/mathiasbynens) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
@@ -40,7 +41,7 @@ set -- -f; source bootstrap.sh
 
 
 ## Other
-
+...
 
 
 #### My manually installed software 
@@ -61,10 +62,11 @@ set -- -f; source bootstrap.sh
 
 
 ## Reference:
+...
 
 ### Visual Studio Client-Side (CAC) Authentication during Development
 
-### Enable SSL for the project if not already enabled.
+#### Enable SSL for the project if not already enabled.
   * Highlight the API project from Solution Explorer and press F4.
   * Set the following properties:
     * `Always Start When Debugging:= true`
@@ -74,7 +76,7 @@ set -- -f; source bootstrap.sh
     * `SSL URL:= https://localhost:44300/`
     * `URL:= https://localhost:60565`
 
-### Modify the IIS-Express applicationhost.config file.
+#### Modify the IIS-Express applicationhost.config file.
 
 By default, the config file will be located at:  
   * VS2013 := `C:\Users\<you>\Documents\IISExpress\config`  
