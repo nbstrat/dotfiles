@@ -53,6 +53,19 @@ set -- -f; source bootstrap.sh
 * [Virtual CloneDrive](https://www.elby.ch/en/products/vcd.html) for mounting iso images within a VM instance.
 
 
+### Software Installation via appget
+(reopen the bash shell after installing appget)
+Beyond Compare: appget install beyond-compare --interactive --verbose
+
+Visual Studio Code: appget install visual-studio-code --interactive --verbose
+Visual Studio 2017 Community Edition: appget install visual-studio-2017-community --interactive --verbose
+
+Visual Studio 2019 Community Edition: appget install visual-studio-2019-community --interactive --verbose
+-- untested
+gVim:  appget install gvim --interactive --verbose
+Virtual CloneDrive: appget install virtual-clonedrive
+
+
 
 #### TODO
 
