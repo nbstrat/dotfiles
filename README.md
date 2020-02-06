@@ -44,10 +44,10 @@ set -- -f; source bootstrap.sh
 #### Manually Installed Software 
 * Java - Needed for BFG file cleaner.
 * VS Code
-* Beyond Compare
-* gVim - https://www.vim.org/download.php
+* [Beyond Compare](https://www.scootersoftware.com/) One the best and easiest to use comparison viewers.  
+* [gVim](https://www.vim.org/download.php) - Grahical Vim editor.
 * SoapUI - https://smartbear.com/ (REST and SOAP API tool)
-* Virtual CloneDrive (for mounting iso images within a VM instance)
+* [Virtual CloneDrive](https://www.elby.ch/en/products/vcd.html) for mounting iso images within a VM instance.
 
 
 
