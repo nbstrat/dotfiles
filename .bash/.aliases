@@ -38,8 +38,8 @@ alias ttmsdocs='cd /c/_projects/ttmsdocs'
 # home pc aliases
 alias briefcase='cd /c/_projects/briefcase/' 
 
-# macbook aliases
-alias wildcat='cd /c/_projects/wildcat'
+# otems aliases
+alias otems='cd /c/_projects/otems'
 
 # open specific files in vim
 alias gridcheats='vim $HOME/Documents/CheatSheets_Reference/datagrid-cheats.txt'
