@@ -54,9 +54,9 @@ set -- -f; source bootstrap.sh
 
 
 ### Software Installation via appget
-[AppGet(https://appget.net/) is a package manager for Windows and it greatly simplifies installing your must-have development software. Just be sure to not to forget to restart your bash shell after installing!
+[AppGet](https://appget.net/) is a package manager for Windows that I have recently started using that greatly simplifies installing your must-have development software. Just be sure to not to forget to restart your bash shell after installing!
 
-Below is my current list of must-haves for getting stuff done.
+Below is my current list of must-haves for getting stuff done. I typically run these commands with the ```interactive``` and ```verbose``` flags to see the specific errors that may occur when executing from certain locations. 
 
 #### Beyond Compare
 ```
