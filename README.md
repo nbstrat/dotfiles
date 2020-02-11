@@ -77,6 +77,7 @@ Virtual CloneDrive: appget install virtual-clonedrive
 ## Reference:
 ...
 
+[Visual Studio Client-side (CAC) Authentication during Development](vs-ssl-config.md)
 ### Visual Studio Client-Side (CAC) Authentication during Development
 
 #### Enable SSL for the project if not already enabled.
