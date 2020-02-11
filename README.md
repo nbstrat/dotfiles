@@ -54,13 +54,28 @@ set -- -f; source bootstrap.sh
 
 
 ### Software Installation via appget
-(reopen the bash shell after installing appget)
-Beyond Compare: appget install beyond-compare --interactive --verbose
+[AppGet(https://appget.net/) is a package manager for Windows and it greatly simplifies installing your must-have development software. Just be sure to not to forget to restart your bash shell after installing!
 
-Visual Studio Code: appget install visual-studio-code --interactive --verbose
-Visual Studio 2017 Community Edition: appget install visual-studio-2017-community --interactive --verbose
+Below is my current list of must-haves for getting stuff done.
 
-Visual Studio 2019 Community Edition: appget install visual-studio-2019-community --interactive --verbose
+#### Beyond Compare
+```
+appget install beyond-compare --interactive --verbose
+```
+#### Visual Studio Code
+```
+appget install visual-studio-code --interactive --verbose
+```
+#### Visual Studio 2017 Community Edition
+```
+appget install visual-studio-2017-community --interactive --verbose
+```
+
+#### Visual Studio 2019 Community Edition
+```
+appget install visual-studio-2019-community --interactive --verbose
+```
+
 -- untested
 gVim:  appget install gvim --interactive --verbose
 Virtual CloneDrive: appget install virtual-clonedrive
