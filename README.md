@@ -101,3 +101,6 @@ Virtual CloneDrive: appget install virtual-clonedrive
 
 ### BFG Repo Cleaner
 [Resolving LFS references](github-error-GH0008.md) with [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 
+
+### Sparse Checkout
+[Sparse Checkout References](sparse-checkout.md)
