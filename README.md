@@ -32,7 +32,7 @@ set -- -f; source bootstrap.sh
 
 
 ## Thanks To
-...
+
 
 * [Jim Nanney](https://github.com/jimnanney) for first introducing me to dotfiles.
 * [Mathias Bynens](https://github.com/mathiasbynens) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
@@ -41,7 +41,6 @@ set -- -f; source bootstrap.sh
 
 
 ## Other
-...
 
 
 #### My manually installed software 
@@ -90,7 +89,7 @@ Virtual CloneDrive: appget install virtual-clonedrive
 
 
 ## Reference:
-...
+
 
 ### Visual Studio CAC 
 [Visual Studio Client-side (CAC) Authentication during Development](vs-ssl-config.md)
