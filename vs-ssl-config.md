@@ -12,10 +12,11 @@
 
 #### Modify the IIS-Express applicationhost.config file.
 
-By default, the config file will be located at:  
+By default, the config file will be located at: 
   * VS2013 := `C:\Users\<you>\Documents\IISExpress\config`  
   * VS2015 := `$(solutionDir)\.vs\config\applicationhost.config`
   * VS2017 := `$(solutionDir)\.vs\config\applicationhost.config`
+  * VS2019 := `$(solutionDir)\.vs\config\applicationhost.config`
 
 >**Create a backup of the original file before making modifications.**  
 >i.e. `config\applicationhost.config.bkup`
