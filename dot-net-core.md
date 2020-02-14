@@ -1,5 +1,7 @@
 # Getting started with .NET Core 
 
+To determine which dotnet core version you have installed, you can use either of these three methods:
+
 
 ### What on my box?
 ```
