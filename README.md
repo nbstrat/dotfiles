@@ -79,7 +79,8 @@ appget install visual-studio-2019-community --interactive --verbose
 gVim:  appget install gvim --interactive --verbose
 Virtual CloneDrive: appget install virtual-clonedrive
 
-
+-- not evaluated (yet)
+Linqpad: https://www.linqpad.net/
 
 #### TODO
 
@@ -103,3 +104,6 @@ Virtual CloneDrive: appget install virtual-clonedrive
 
 ### Sparse Checkout
 [Sparse Checkout References](sparse-checkout.md)
+
+### DotNet Core
+[Dot Net Core References](dot-net-core.md)
