@@ -1,18 +1,19 @@
-# Getting started with .NET Core 
+# .NET Core Version Locations 
 
 To determine which dotnet core version you have installed, you can use either of these three methods:
 
-
-### What on my box?
+1) Check the version:
 ```
 dotnet --version
 ```
 ![dotnet version](/images/ss-dotnet-version.png)
 
 
+2) Check the file location: 
 The dotnet sdk packages are located in `C:\Program Files\dotnet\sdk`
 
 
+3) Get info for all versions installed:
 ```
 dotnet --info
 ```
