@@ -4,8 +4,7 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-# Temporary disable pulling any changes from origin 
-# TODO git pull origin master;
+git pull origin master;
 
 
 function doIt() {
