@@ -3,9 +3,7 @@
 [https://nbstrat.github.io/dotfiles/](https://nbstrat.github.io/dotfiles/)
 
 
-Rework version to automate setting up a new machine. This dotfile collection is largely based on the dotfile collection of mathiasbynens dotfile collection. 
-
-https://github.com/mathiasbynens/dotfiles 
+Rework version to automate setting up a new machine. 
 
 
 ### Installation
@@ -56,6 +54,14 @@ set -- -f; source bootstrap.sh
 [AppGet](https://appget.net/) is a package manager for Windows that I have recently started using that greatly simplifies installing your must-have development software. Just be sure to not to forget to restart your bash shell after installing!
 
 Below is my current list of must-haves for getting stuff done. I typically run these commands with the ```interactive``` and ```verbose``` flags to see the specific errors that may occur when executing from certain locations. 
+
+NOTE: The following commands can be executed in Powershell or in a Bash Shell.
+
+#### Git
+appget install git --interactive --verbose
+
+#### Git Extensions
+appget install gitextensions --interactive --verbose
 
 #### Beyond Compare
 ```
