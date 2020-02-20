@@ -57,3 +57,14 @@ echo "path/within_repo/to/desired_subdir/*" > .git/info/sparse-checkout
 git checkout master
 git pull origin master
 ```
+
+
+* LFS Issue when moving LFS from github to gitlab
+http://gopalkri.com/2016/10/07/Migrating-Repositories-With-Git-Lfs/
+TL;DR - Moved my LFS enabled repo from github to gitlab and my LFS files were not auto-magically transferred. 
+All files have to be fetched and then pushed to the new repo service.
+And don't do this from a repo that has sparse-checkout enabled.
+```
+git lfs fetch --all 
+git lfs push gitlab --all 
+```
