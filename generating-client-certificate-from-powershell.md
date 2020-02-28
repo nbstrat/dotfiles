@@ -5,14 +5,8 @@ They would typically not need to be regenerated unless additional changes are re
 Information below is how to create and export the certs for the purpose of including in unit test. 
 
 
-certmgr.msc
-
-
-* Execute the two power shell statements below to generate the certificates.
-* Certificates will be generated and automatically added to the cert store in Certificates - Current User Personal/Certificates. 
-
-![CertMgr](/images/ss-cac-cert.png)
-
+* Execute the power shell statements below to generate the certificates.
+* Certificates will be generated and automatically added to the cert store in Certificates - Current User Personal/Certificates.
 
 
 ### Create The Certs:
@@ -23,6 +17,9 @@ $cert = New-SelfSignedCertificate -certstorelocation cert:\CurrentUser\My -Subje
 ```
 $cert = New-SelfSignedCertificate -certstorelocation cert:\CurrentUser\My -Subject "C=US,O=U.S. Government,OU=DoD,CN=BOGUS.10.USER.1234567890"
 ```
+
+After creating the certs, they will be available for export from the CertMgr snap-in.
+![CertMgr](/images/ss-cac-cert.png) 
 
 ### Export The Certs
 Use the Windows CertMgr (certmgr.msc - Control Panel > User Accounts Manage user certificates) to locate 
