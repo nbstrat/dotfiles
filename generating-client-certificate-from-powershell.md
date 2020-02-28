@@ -27,14 +27,13 @@ and export each of the certificates individually using the following conditions 
 * Export Private Key: No, do not export the pivate key 
 * Export File Format: Base-64 encoded X.509
 
-The exported certificates will need a file name and I suggest using the following to make it easier when referencing these certs within code:
+The exported certificates will need a file name and I suggest using `bogus.10.user.cer` and `bogus.16.user.cer` to make it easier when referencing these certs within code.
+
+The exported certificates can be checked using the following if you have openssl or by using an online [certificate decoder](https://www.sslshopper.com/certificate-decoder.html):
 ```
-bogus.10.user.cer
-bogus.16.user.cer
+openssl x509 -in bogus.10.user.cer -text -noout
+openssl x509 -in bogus.16.user.cer -text -noout
 ```
 
-After exporting the certs, the values can be checked by opening the file with a text editor and pasting the results into an online decoder such as [https://www.certlogik.com/decoder/](https://www.certlogik.com/decoder/).
 
-
-#### CertReq Reference
 [CertReq Reference](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn296456(v%3Dws.11))
