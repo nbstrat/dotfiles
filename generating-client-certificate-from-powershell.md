@@ -11,7 +11,7 @@ certmgr.msc
 * Execute the two power shell statements below to generate the certificates.
 * Certificates will be generated and automatically added to the cert store in Certificates - Current User Personal/Certificates. 
 
-``` 
+![CertMgr](/images/ss-cac-cert.png)
 
 
 
