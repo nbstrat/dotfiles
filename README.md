@@ -99,7 +99,8 @@ Linqpad: https://www.linqpad.net/
 
 
 ### Visual Studio CAC 
-[Visual Studio Client-side (CAC) Authentication during Development](vs-ssl-config.md)
+* [Visual Studio Client-side (CAC) Authentication during Development](vs-ssl-config.md)
+* [HowTo create client certificates for CAC testing](generating-client-certificate-from-powershell.md)
 
 ### Oracle SQL Developer
 [Oracle Sql Developer User Configuration Settings](oracle-sql-developer.md)
