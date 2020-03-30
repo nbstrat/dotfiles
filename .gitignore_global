@@ -14,3 +14,12 @@ Thumbs.db
 
 # Tilde files (temporary swap files)
 *.*~
+
+# Visual Studio solution w/ database project
+**/*.jfm 
+**/*.dbmdl 
+
+# I typically set up my projects to do local build outputs to 
+# a directory entitled _deploy. Adjust to fit your world.
+# Ignore the local VS _deploy build output folder structure.
+**/_deploy/*
