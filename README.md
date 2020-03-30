@@ -81,6 +81,11 @@ appget install visual-studio-2017-community --interactive --verbose
 appget install visual-studio-2019-community --interactive --verbose
 ```
 
+#### Visual Studio 2019 Enterprise Edition
+```
+appget install visual-studio-2019-enterprise --interactive --verbose
+```
+
 -- untested
 gVim:  appget install gvim --interactive --verbose
 Virtual CloneDrive: appget install virtual-clonedrive
