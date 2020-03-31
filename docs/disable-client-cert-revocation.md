@@ -101,7 +101,7 @@ will be your certificate request number)
 * Click Next and then click Finish
 (This will save your certificate as a file with extension .pfx) 
 
-After importing in, the Dod Root certs should also be available within the Trusted Root Certification Autorities
+After importing in, the Dod Root certs should also be available within the Trusted Root Certification Authorities
 
 
 [Reference](https://support.microsoft.com/en-us/help/942061/error-message-when-you-visit-a-web-site-that-is-hosted-on-iis-7-0-http)

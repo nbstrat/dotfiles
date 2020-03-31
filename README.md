@@ -105,18 +105,18 @@ Linqpad: https://www.linqpad.net/
 
 ### Visual Studio CAC 
 * [Visual Studio Client-side (CAC) Authentication during Development](docs/vs-ssl-config.md)
-* [HowTo create client certificates for CAC testing](generating-client-certificate-from-powershell.md)
+* [HowTo create client certificates for CAC testing](docs/generating-client-certificate-from-powershell.md)
 
 
 ### Oracle SQL Developer
-[Oracle Sql Developer User Configuration Settings](oracle-sql-developer.md)
+[Oracle Sql Developer User Configuration Settings](docs/oracle-sql-developer.md)
 
 
 ### BFG Repo Cleaner
-[Resolving LFS references](github-error-GH0008.md) with [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 
+[Resolving LFS references](docs/github-error-GH0008.md) with [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 
 
 ### Sparse Checkout
-[Sparse Checkout References](sparse-checkout.md)
+[Sparse Checkout References](docs/sparse-checkout.md)
 
 ### DotNet Core
-[Dot Net Core References](dot-net-core.md)
+[Dot Net Core References](docs/dot-net-core.md)
