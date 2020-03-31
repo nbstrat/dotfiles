@@ -17,7 +17,7 @@ Open Powershell with elevated (Administrator) permissions.
 ---------------
 
 `netsh http show sslcert ipport=0.0.0.0:44307`
-
+**Verify Client Certificate Revocation : Enabled**
 ```powershell
 IP:port                      : 0.0.0.0:44307
     Certificate Hash             : 61d34f532da121bbab64723c4871e72c92f03735
@@ -61,6 +61,7 @@ IP:port                      : 0.0.0.0:44307
 
 Executing `netsh http show sslcert ipport=0.0.0.0:44307` again will return something similiar to the output below indicating `Verify Client Certificate Revocation : Disabled`
 
+**Verify Client Certificate Revocation : Disabled**
 ```powershell
 SSL Certificate bindings:
 -------------------------
