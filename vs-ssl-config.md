@@ -40,3 +40,6 @@ If properly configured, you will be prompted for CAC when making request to port
 * `https://localhost:44300/`  
 * Without CAC prompt   
 * `http://localhost:60565/`  
+
+
+Continue to the final step of [Disabling Client Cert Revocation](disabling-client-cert-revocation).
