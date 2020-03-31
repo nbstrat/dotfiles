@@ -51,7 +51,7 @@ IP:port                      : 0.0.0.0:44307
     Max Settings Per Minute      : 4294967295
 ```
 
-* deleting the binding for the Cac-hack application
+* deleting the binding for the application
 
 `netsh http delete sslcert ipport=0.0.0.0:44307`
 
@@ -88,18 +88,17 @@ SSL Certificate bindings:
 ```
 Take note that root certificates may not be available when configuring on a non-DoD machine and you will recieve 403.16 http status codes.  A work around can be performed to export your Dod cert using the following and then importing it back in as a Trusted Root Certificate using the mmc snap-in.
 Export Certificate in to a file.
-• Open Internet explorer  Tools  Internet Option Contents 
+* Open Internet explorer > Tools > Internet Option >Contents >
 Certificate (This will display your certificate under Personal Tab.
-• Click on the Certificate then click Export. Certificate Export Wizard window
+* Click on the Certificate then click Export. Certificate Export Wizard window
 will open.
-• Click Next  Select  Yes, export private keys
-• Click Next  Select Include all certificates in Certificate path if possible
+* Click Next > Select > Yes, export private keys
+* Click Next > Select Include all certificates in Certificate path if possible
 and Enable strong protection.
-• Click Next and enter password and Confirm Password. (Here password
+* Click Next and enter password and Confirm Password. (Here password
 will be your certificate request number)
-• Click Next and enter File Name with complete path OR Click Browse
-Click Desktop and enter File Name and click Save.
-• Click Next and then click Finish
+* Click Next and enter File Name with complete path OR Click Browse > Click Desktop and enter File Name and click Save.
+* Click Next and then click Finish
 (This will save your certificate as a file with extension .pfx) 
 
 After importing in, the Dod Root certs should also be available within the Trusted Root Certification Autorities
