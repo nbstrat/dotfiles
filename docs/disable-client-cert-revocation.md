@@ -17,6 +17,7 @@ Open Powershell with elevated (Administrator) permissions.
 ---------------
 
 `netsh http show sslcert ipport=0.0.0.0:44307`
+
 **Verify Client Certificate Revocation : Enabled**
 ```powershell
 IP:port                      : 0.0.0.0:44307
