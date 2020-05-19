@@ -85,6 +85,10 @@ appget install visual-studio-2019-community --interactive --verbose
 ```
 appget install visual-studio-2019-enterprise --interactive --verbose
 ```
+#### 7-Zip
+```
+appget install 7zip --interactive --verbose
+```
 
 *untested*
 ### gVim
