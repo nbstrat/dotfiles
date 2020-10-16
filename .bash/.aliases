@@ -39,7 +39,8 @@ alias ttmsdocs='cd /c/_projects/ttmsdocs'
 alias briefcase='cd /c/_projects/briefcase/' 
 
 # otems aliases
-alias otems='cd /c/_projects/otems'
+alias otems     ='cd /c/_projects/otems'
+alias otems1.6  ='cd /c/_projects/otems-v1.6.0'
 
 # open specific files in vim
 alias gridcheats='vim $HOME/Documents/CheatSheets_Reference/datagrid-cheats.txt'
