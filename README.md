@@ -9,13 +9,13 @@ Rework version to automate setting up a new machine.
 ### Installation
 Warning: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-Using Git and the bootstrap script
-You can clone the repository wherever you want. (I like to keep it in ~/_projects/dotfiles) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+#### Using Git and the bootstrap script
+You can clone this repository wherever you want. (I like to keep it in ~/_projects/dotfiles) The bootstrapper script will pull in the latest version from origin and copy the files to your home folder.
 
 ```bash
 git clone https://github.com/nbstrat/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
-To update, cd into your local dotfiles repository and then:
+To apply updates, cd into your local dotfiles repository and then:
 
 ```bash
 source bootstrap.sh
@@ -60,11 +60,13 @@ Below is my current list of must-haves for getting stuff done. I typically run t
 NOTE: The following commands can be executed in Powershell or a Bash Shell.
 
 #### Git
+```
 appget install git --interactive --verbose
-
+```
 #### Git Extensions
+```
 appget install gitextensions --interactive --verbose
-
+```
 #### Beyond Compare
 ```
 appget install beyond-compare --interactive --verbose
@@ -77,15 +79,17 @@ appget install visual-studio-code --interactive --verbose
 ```
 appget install visual-studio-2017-community --interactive --verbose
 ```
-
 #### Visual Studio 2019 Community Edition
 ```
 appget install visual-studio-2019-community --interactive --verbose
 ```
-
 #### Visual Studio 2019 Enterprise Edition
 ```
 appget install visual-studio-2019-enterprise --interactive --verbose
+```
+#### 7-Zip
+```
+appget install 7zip --interactive --verbose
 ```
 
 
@@ -95,7 +99,6 @@ winget search git
 winget install --id=Microsoft.VisualStudio.2022.Professional  -e
 winget install Microsoft.VisualStudio.2022.Enterprise -e
 winget install -e --id Microsoft.VisualStudioCode
-
 
 #### TODO
 
@@ -108,19 +111,19 @@ winget install -e --id Microsoft.VisualStudioCode
 
 
 ### Visual Studio CAC 
-* [Visual Studio Client-side (CAC) Authentication during Development](vs-ssl-config.md)
-* [HowTo create client certificates for CAC testing](generating-client-certificate-from-powershell.md)
+* [Visual Studio Client-side (CAC) Authentication during Development](docs/vs-ssl-config.md)
+* [HowTo create client certificates for CAC testing](docs/generating-client-certificate-from-powershell.md)
 
 
 ### Oracle SQL Developer
-[Oracle Sql Developer User Configuration Settings](oracle-sql-developer.md)
+[Oracle Sql Developer User Configuration Settings](docs/oracle-sql-developer.md)
 
 
 ### BFG Repo Cleaner
-[Resolving LFS references](github-error-GH0008.md) with [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 
+[Resolving LFS references](docs/github-error-GH0008.md) with [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 
 
 ### Sparse Checkout
-[Sparse Checkout References](sparse-checkout.md)
+[Sparse Checkout References](docs/sparse-checkout.md)
 
 ### DotNet Core
-[Dot Net Core References](dot-net-core.md)
+[Dot Net Core References](docs/dot-net-core.md)

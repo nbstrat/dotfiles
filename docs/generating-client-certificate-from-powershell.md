@@ -17,6 +17,11 @@ $cert = New-SelfSignedCertificate -certstorelocation cert:\CurrentUser\My -Subje
 ```
 $cert = New-SelfSignedCertificate -certstorelocation cert:\CurrentUser\My -Subject "C=US,O=U.S. Government,OU=DoD,CN=BOGUS.10.USER.1234567890"
 ```
+#### Update
+The Suffix portion (e.g. Jr, Sr, II, etc) of a DoD CAC user's name is included in the SimpleName property of the CAC Card. 
+```
+$cert = New-SelfSignedCertificate -certstorelocation cert:\CurrentUser\My -Subject "C=US,O=U.S. Government,OU=DoD,CN=LastName.FirstName.MiddleName.Suffix.1234567890123456"
+```
 
 After creating the certs, they will be available for export from the CertMgr snap-in.
 ![CertMgr](/images/ss-cac-cert.png) 
