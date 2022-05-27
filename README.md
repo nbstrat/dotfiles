@@ -50,12 +50,14 @@ set -- -f; source bootstrap.sh
 * [Virtual CloneDrive](https://www.elby.ch/en/products/vcd.html) for mounting iso images within a VM instance.
 
 
-### Software Installation via appget
+### Software Installation via appget is no longer an option.
+[The Day AppGet Died]https://keivan.io/the-day-appget-died/
+
 [AppGet](https://appget.net/) is a package manager for Windows that I have recently started using that greatly simplifies installing your must-have development software. Just be sure to not to forget to restart your bash shell after installing!
 
 Below is my current list of must-haves for getting stuff done. I typically run these commands with the ```interactive``` and ```verbose``` flags to see the specific errors that may occur when executing from certain locations. 
 
-NOTE: The following commands can be executed in Powershell or in a Bash Shell.
+NOTE: The following commands can be executed in Powershell or a Bash Shell.
 
 #### Git
 appget install git --interactive --verbose
@@ -86,12 +88,14 @@ appget install visual-studio-2019-community --interactive --verbose
 appget install visual-studio-2019-enterprise --interactive --verbose
 ```
 
--- untested
-gVim:  appget install gvim --interactive --verbose
-Virtual CloneDrive: appget install virtual-clonedrive
 
--- not evaluated (yet)
-Linqpad: https://www.linqpad.net/
+### winget - Software Installation
+Just FYI  winget sucks in comparison to the ease of use with appget.
+winget search git
+winget install --id=Microsoft.VisualStudio.2022.Professional  -e
+winget install Microsoft.VisualStudio.2022.Enterprise -e
+winget install -e --id Microsoft.VisualStudioCode
+
 
 #### TODO
 
