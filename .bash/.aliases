@@ -45,6 +45,8 @@ alias otems='cd /c/_projects/otems'
 alias gridcheats='vim $HOME/Documents/CheatSheets_Reference/datagrid-cheats.txt'
 alias gitcheats='vim $HOME/Documents/CheatSheets_Reference/Git/git-cheats.txt'
 
+#open Git Extensions
+alias gite='"/c/Program Files (x86)/GitExtensions/GitExtensions.exe"'
 
 # other stuff
 alias vs='"/c/Program Files (x86)/Microsoft Visual Studio 12.0/Common7/IDE/devenv.exe"'
