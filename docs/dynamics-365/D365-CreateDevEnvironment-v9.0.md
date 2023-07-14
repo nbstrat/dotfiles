@@ -96,9 +96,9 @@ I created each of these with the same default password for simplicity.
 NOTE: Initial naming of DeploymentWebService and Montioringervice was too long.
 Active Directory support up to 20 characters for user login name.
 
-![Alt text](images/adu-4.png)
-![Alt text](images/adu-5.png)
-![Alt text](images/adu-6.png)
+![Alt text](images/adu-4.PNG)
+![Alt text](images/adu-5.PNG)
+![Alt text](images/adu-6.PNG)
 
 
 I created these  as "Users" of the D365 Organization Unit with default password that never expires.
