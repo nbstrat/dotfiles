@@ -103,8 +103,6 @@ Active Directory support up to 20 characters for user login name.
 
 I created these  as "Users" of the D365 Organization Unit with default password that never expires.
 
-Should these have been "InetOrgPerson" or a "Managed Service Account"?)
-WIP Initial POC for Deployment Web Service and Monitoring Service were configured with NT Service Account.
 
 ![Alt text](images/adu-7.PNG)
 
@@ -246,3 +244,6 @@ http://win-9i6fdfme4lg:5555/CRM/main.aspx (using chrome)
 Note: This install has XRM menu item. Previous install had Sales menu item. Not sure why the difference.
 
 This instance is NOT accessible from the host machine, but must be connected to from within the virtual machine. I have the default adapter of the Hyper-V instances (Virtual Switch Manager) specifically set to  Internal  to prevent exposing any data from the D365 installation to the outside world.
+
+
+Reference: https://butenko.pro/2019/01/09/d365ce_90_step_by_step_installation/  
