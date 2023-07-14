@@ -106,19 +106,19 @@ I created these  as "Users" of the D365 Organization Unit with default password 
 Should these have been "InetOrgPerson" or a "Managed Service Account"?)
 WIP Initial POC for Deployment Web Service and Monitoring Service were configured with NT Service Account.
 
-![Alt text](images/adu-7.png)
+![Alt text](images/adu-7.PNG)
 
 ## Performance Log User
 From Active Directory Users and Computers, highlight D365AppServer and select properties.  
-![Alt text](images/plu-1.png)
+![Alt text](images/plu-1.PNG)
 
 Select the Member Of tab.  
 Select Add.  
 Enter Performance Log User and select Check Names.  
-![Alt text](images/plu-2.png)  
+![Alt text](images/plu-2.PNG)  
 
 Select Ok and then select Apply  
-![Alt text](images/plu-3.png)  
+![Alt text](images/plu-3.PNG)  
 
 Repeat for the D365AsyncService
 
@@ -126,33 +126,33 @@ Repeat for the D365AsyncService
 
 # Install SQL Server
 Select New SQL Server stand-alone installation.
-![Alt text](images/db-1.png)
-![Alt text](images/db-2.png)
-![Alt text](images/db-3.png)
-![Alt text](images/db-4.png)
+![Alt text](images/db-1.PNG)
+![Alt text](images/db-2.PNG)
+![Alt text](images/db-3.PNG)
+![Alt text](images/db-4.PNG)
 
 D365 will require the “Full-Text and Semantic Extraction for Search” option.
-![Alt text](images/db-5.png)
+![Alt text](images/db-5.PNG)
 
-![Alt text](images/db-6.png)
-![Alt text](images/db-7.png)
-![Alt text](images/db-8.png)
-![Alt text](images/db-9.png)
-![Alt text](images/db-10.png)
-![Alt text](images/db-11.png)
+![Alt text](images/db-6.PNG)
+![Alt text](images/db-7.PNG)
+![Alt text](images/db-8.PNG)
+![Alt text](images/db-9.PNG)
+![Alt text](images/db-10.PNG)
+![Alt text](images/db-11.PNG)
 
 
 # Install SQL Server Reporting Services
 Open Report Services Configuration Manager and connect to the database.
-![Alt text](images/rs-1.png)
+![Alt text](images/rs-1.PNG)
 
-![Alt text](images/rs-2.png)
+![Alt text](images/rs-2.PNG)
 
-![Alt text](images/rs-3.png)
+![Alt text](images/rs-3.PNG)
 
-![Alt text](images/rs-4.png)
+![Alt text](images/rs-4.PNG)
 
-![Alt text](images/rs-5.png)
+![Alt text](images/rs-5.PNG)
 
 Click Exit to close Report Service Configuration Manager
 
@@ -160,26 +160,26 @@ Click Exit to close Report Service Configuration Manager
 
 # Configure Internet Explorer Enhanced Security
 Using Server Manager, turn Off IE Enhanced Security   
-![Alt text](images/es-1.png)
+![Alt text](images/es-1.PNG)
 
-![Alt text](images/es-2.png)
+![Alt text](images/es-2.PNG)
 
 
 # Install D365 v9.0
 Download CRM9.0-Server-ENU-amd-64.exe
 Start the executable and extract file to C:\D365
 
-![Alt text](images/d365-1.png)
+![Alt text](images/d365-1.PNG)
 
 Allow the installer to check for updates and apply if needed.
 
-![Alt text](images/d365-2.png)
-![Alt text](images/d365-3.png)
+![Alt text](images/d365-2.PNG)
+![Alt text](images/d365-3.PNG)
 
 Enter the Dynamics 365 Product Key
 (the license key being used for development is available to me via my MSDN subscription)
 
-![Alt text](images/d365-4.png)
+![Alt text](images/d365-4.PNG)
 
 
 * Create folder SQLNativeClient, ![Download](https://www.microsoft.com/en-us/download/confirmation.aspx?id=50402) download file and put it in created folder and rename downloaded file sqlncli.msi to name sqlncli_x64.msi;
@@ -187,50 +187,50 @@ Enter the Dynamics 365 Product Key
 * Create folder SQLSharedManagementObjects, download file and put it to created folder and rename downloaded file SharedManagementObjects.msi to name SharedManagementObjects_x64.msi.
 
 
-![Alt text](images/d365-5.png)
+![Alt text](images/d365-5.PNG)
 
-![Alt text](images/d365-6.png)
+![Alt text](images/d365-6.PNG)
 
-![Alt text](images/d365-7.png)
+![Alt text](images/d365-7.PNG)
 
-![Alt text](images/d365-8.png)
+![Alt text](images/d365-8.PNG)
 
-![Alt text](images/d365-9.png)
+![Alt text](images/d365-9.PNG)
 
-![Alt text](images/d365-10.png)
+![Alt text](images/d365-10.PNG)
 
 Click Browse and select D365 as the Organizational Unit
 
-![Alt text](images/d365-11.png)
+![Alt text](images/d365-11.PNG)
 
-![Alt text](images/d365-12.png)
+![Alt text](images/d365-12.PNG)
 
-![Alt text](images/d365-13.png)
+![Alt text](images/d365-13.PNG)
 
 Assign the Service Accounts created earlier for each of the Services.  
-![Alt text](images/d365-14.png)
+![Alt text](images/d365-14.PNG)
 
 Create new Website with port 5555.
 
-![Alt text](images/d365-15.png)
+![Alt text](images/d365-15.PNG)
 
 Leave the optional Email Router setting blank.
 
 Specify the Organizational Settings
 
-![Alt text](images/d365-16.png)
+![Alt text](images/d365-16.PNG)
 
 Specify Reporting Services Server
 
-![Reporting Services](images/d365-17.png)
+![Reporting Services](images/d365-17.PNG)
 
 
 Click Next to run System Checks and correct any errors that are displayed. 
 The Data encryption warning can be ignored. 
-![Reporting Services](images/systemChecks.png)  
+![Reporting Services](images/systemChecks.PNG)  
 
 Click Install  
-![Reporting Services](images/install-2.png)  
+![Reporting Services](images/install-2.PNG)  
 
 After successful installation, you will be prompted to install Reporting Extensions Setup.  
 Reporting Extensions should show green check marks for:  
@@ -238,7 +238,7 @@ Reporting Extensions should show green check marks for:
 * Environment Checks  
 * User Input Checks  
 
-![Reporting Services](images/finish.png)  
+![Reporting Services](images/finish.PNG)  
 
 Open browser and navigate to the D365 application to verify that installation was successful.  
 http://win-9i6fdfme4lg:5555/CRM/main.aspx (using chrome)
