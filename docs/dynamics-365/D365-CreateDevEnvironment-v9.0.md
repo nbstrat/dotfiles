@@ -74,8 +74,8 @@ Expand the dev.loc forest.
 ![Alt text](images/adu-2.png)
 
 
-Highlight dev.loc and select New > Organizational Unit
-Create a new Organizational Unit named D365
+Highlight dev.loc and select New > Organizational Unit  
+Create a new Organizational Unit named D365  
 ![Alt text](images/adu-3.PNG)
 
 
