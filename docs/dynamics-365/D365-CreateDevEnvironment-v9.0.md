@@ -76,7 +76,7 @@ Expand the dev.loc forest.
 
 Highlight dev.loc and select New > Organizational Unit
 Create a new Organizational Unit named D365
-![Alt text](images/adu-3.png)
+![Alt text](images/adu-3.PNG)
 
 
 Create users for the Service Accounts as part of the D365 Organizational Unit and provide privileges based 
