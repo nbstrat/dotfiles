@@ -127,3 +127,6 @@ winget install -e --id Microsoft.VisualStudioCode
 
 ### DotNet Core
 [Dot Net Core References](docs/dot-net-core.md)
+
+### Dynamics 365 Hyper-V Development Instance
+[Dynamics 365 v9](docs/dynamics-365/D365-CreateDevEnvironment-v9.0.md)
