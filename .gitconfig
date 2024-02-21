@@ -63,3 +63,5 @@
 	postBuffer = 524288000
 [status]
 	showUntrackedFiles = all
+[init]
+    defaultBranch = main
