@@ -62,43 +62,37 @@ NOTE: The following commands can be executed in Powershell or a Bash Shell.
 #### Git
 ```
 appget install git --interactive --verbose
+winget install -e --id Git.Git
 ```
 #### Git Extensions
 ```
-appget install gitextensions --interactive --verbose
+appget install gitextensions --interactive --verbose  
+winget install -e --id GitExtensionsTeam.GitExtensions
 ```
 #### Beyond Compare
 ```
 appget install beyond-compare --interactive --verbose
+winget install -e --id ScooterSoftware.BeyondCompare4
 ```
 #### Visual Studio Code
 ```
 appget install visual-studio-code --interactive --verbose
+winget install -e --id Microsoft.VisualStudioCode
 ```
-#### Visual Studio 2017 Community Edition
+#### Visual Studio 2022 Enterprise Edition
 ```
-appget install visual-studio-2017-community --interactive --verbose
-```
-#### Visual Studio 2019 Community Edition
-```
-appget install visual-studio-2019-community --interactive --verbose
-```
-#### Visual Studio 2019 Enterprise Edition
-```
-appget install visual-studio-2019-enterprise --interactive --verbose
+winget install -e --id Microsoft.VisualStudio.2022.Enterprise.Preview
 ```
 #### 7-Zip
 ```
 appget install 7zip --interactive --verbose
+winget install -e --id 7zip.7zip
 ```
 
 
 ### winget - Software Installation
-Just FYI  winget sucks in comparison to the ease of use with appget.
-winget search git
-winget install --id=Microsoft.VisualStudio.2022.Professional  -e
-winget install Microsoft.VisualStudio.2022.Enterprise -e
-winget install -e --id Microsoft.VisualStudioCode
+Just FYI  winget sucks in comparison to the ease of use with appget.  
+winget search git  
 
 #### TODO
 
