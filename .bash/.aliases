@@ -44,6 +44,7 @@ alias otems1.6='cd /c/_projects/otems-v1.6.0'
 
 #smt aliases
 alias smt='cd /c/_projects/smt-crm'
+alias archive='cd /c/_projects/smt-crm/smtarchivedataservice'
 
 # open specific files in vim
 alias gridcheats='vim $HOME/Documents/CheatSheets_Reference/datagrid-cheats.txt'
